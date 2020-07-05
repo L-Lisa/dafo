@@ -33,7 +33,6 @@ export const MainPage = () => {
                 </ProductsDiv>
             </FlexDiv1>
             <FlexDiv2>
-
                 <ContactUs>
                     <h2>Contact Us</h2>
                     <img src={contactUs} alt="Contact Dafo here" />
@@ -62,6 +61,7 @@ display:flex;
 flex-direction:column;
 @media (min-width: 676px) {
     flex-direction:row;
+    padding: 30px;
     }
 h2{
     color: white;
@@ -71,6 +71,7 @@ h2{
     width: 100%;
     text-align: center;
     padding: 5px 8px;
+    margin-block-start: 0;
 }   
 `;
 

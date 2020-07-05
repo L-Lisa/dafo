@@ -47,6 +47,8 @@ padding: 10px;
 display:flex;
 flex-direction:column;
 @media (min-width: 676px) {
+    flex-direction:row;
+    padding: 30px;
     }
     h2{
     color: white;
