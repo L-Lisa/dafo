@@ -1,6 +1,8 @@
 import React from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { MainPage } from "../pages/Mainpage"
+import { BusPage } from "../pages/BusPage"
+
 
 export const Directions = () => {
     return (
@@ -12,9 +14,10 @@ export const Directions = () => {
                     <Route path="/" exact>
                         <MainPage />
                     </Route>
-                    {/*   <Route path="/about" exact>
-                        <About />
+                    <Route path="/bus" exact>
+                        <BusPage />
                     </Route>
+                    {/*  
                     <Route path="/sessions" exact>
                         <LoginForm />
                     </Route>
