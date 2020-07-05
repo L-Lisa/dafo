@@ -21,7 +21,7 @@ export const MainPage = () => {
                 </Intro>
 
                 <ProductsDiv>
-                    <Link>
+                    <Link to="/bus">
                         <img src={Buses} alt="link to Dafo product page buses" />
                     </Link>
                     <Link>
