@@ -1,10 +1,10 @@
 import React from "react"
 import styled from 'styled-components/macro'
 import MainImg from "..//images/MainImg.png"
-import Buses from "..//images/ProductImg-Buses.png"
-import Mining from "..//images/ProductImg-Mining.png"
-import PowerGen from "..//images/ProductImg-powerGenerator.png"
-import contactUs from "..//images/contactUs.png"
+import Buses from "..//images/ProductImg-Buses.jpg"
+import Mining from "..//images/ProductImg-Mining.jpg"
+import PowerGen from "..//images/ProductImg-powerGenerator.jpeg"
+import contactUs from "..//images/contactUs.jpg"
 import { Link } from "react-router-dom"
 
 
@@ -39,8 +39,9 @@ export const MainPage = () => {
                     <p>We are here to help! <br />
                     For questions and technical support:
                     <ul>
-                            <li><h3>Telephone: </h3>+971 4 new number </li>
-                            <li><h3>E-mail: </h3>info@dafo-middle-east.com</li>
+                            <li>Telephone:<h3>+971 4 new number </h3></li>
+
+                            <li>E-mail: <h3>info@dafo-middle-east.com</h3></li>
                             <li><h3>Opening hours:</h3><p className="block"> Sun-Thu: 9.00am – 6.00pm</p>
                             </li>
                         </ul>

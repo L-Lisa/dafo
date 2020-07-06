@@ -1,7 +1,7 @@
 import React from "react"
 import styled from 'styled-components/macro'
-import BusPageMainImage from "..//images/BusPageMainImage.png"
-import JohanImage from "..//images/JohanImage.png"
+import BusPageMainImage from "..//images/BusPageMainImage.jpg"
+import JohanImage from "..//images/JohanImage.jpg"
 import UnceImage from "..//images/UnceImage.png"
 
 export const BusPage = () => {

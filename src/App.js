@@ -6,3 +6,6 @@ export const App = () => {
     <Directions />
   )
 }
+
+
+// Make product images backgrounds
