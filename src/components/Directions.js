@@ -2,7 +2,11 @@ import React from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { MainPage } from "../pages/Mainpage"
 import { BusPage } from "../pages/BusPage"
-
+import { PowerGenPage } from "../pages/PowerGenPage"
+import { MiningConstruction } from "../pages/MiningConstruction"
+import { ContactUsPage } from "../pages/ContactUsPage"
+import { SiteMap } from "../pages/SiteMap"
+import { Footer } from "../components/Footer"
 
 export const Directions = () => {
     return (
@@ -14,25 +18,33 @@ export const Directions = () => {
                     <Route path="/" exact>
                         <MainPage />
                     </Route>
+
                     <Route path="/bus" exact>
                         <BusPage />
                     </Route>
-                    {/*  
-                    <Route path="/sessions" exact>
-                        <LoginForm />
+
+                    <Route path="/powergenerators" exact>
+                        <PowerGenPage />
                     </Route>
-                    <Route path="/plants" exact>
-                        <Plants />
+
+                    <Route path="/mining-constructon" exact>
+                        <MiningConstruction />
                     </Route>
-                    <Route path="/profile" exact>
-                        <Profile />
+
+                    <Route path="/contact-us" exact>
+                        <ContactUsPage />
                     </Route>
+
+                    <Route path="/site-map" exact>
+                        <SiteMap />
+                    </Route>
+                    {/* 
                     <Route path="/plants/:id" exact>
                         <SinglePlantPage />
                     </Route> */}
                 </Switch>
             </main>
-            {/*   <Footer /> */}
+            <Footer />
         </BrowserRouter>
     )
 }

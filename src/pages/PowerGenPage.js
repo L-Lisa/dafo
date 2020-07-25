@@ -1,43 +1,34 @@
 import React from "react"
 import styled from 'styled-components/macro'
-import BusPageMainImage from "..//images/BusPageMainImage.jpg"
+import PowerGenMainImage from "..//images/Kompressor.JPG"
 import JohanImage from "..//images/JohanImage.jpg"
 import UnceImage from "..//images/UnceImage.png"
-import ReactPlayer from 'react-player/youtube'
 import Shadi from "..//images/Shadi.jpg"
 import contactUs from "..//images/contactUs.jpg"
 
-export const BusPage = () => {
+export const PowerGenPage = () => {
     return (
         <Wrapper>
             <FlexDiv1>
                 <Intro>
-                    <img src={BusPageMainImage} alt="Dafo Buses" />
+                    <img src={PowerGenMainImage} alt="Dafo power-generator" />
                     <MainText>
                         <h1>Buses</h1>
-                        <p>Dafo is a market leader in extinguishing systems for vehicles and our Fire Suppression Systems for buses are approved according to the new regulation UNECE R107. Engines, hydraulics, fuel and electrical installations pose the greatest fire risks on buses. These fires often take hold very quickly and leave little time for evacuating the bus. Our systems are thoroughly EMC, vibration and temperature tested according to vehicle standards to ensure it will perform in any situation. Many of the world’s leading bus manufacturers install Dafo systems in their assembly line. Our engineers understand the importance of modern lean production and find solutions that integrates our system in your manufacturing process. A low total cost of ownership is an important key factor for every bus operator. Dafo Fire Suppression Systems, with its superior maintenance intervals and reliability, contributes to increased profitability for manufacturers and operators. In the video below, you can see the effectiveness of an UNECE R107 approved Dafo Forrex Fire Suppression System.
-                        </p>
-                        <a href="https://youtu.be/pzBvZsKDHlE"><Button>Live demo link..</Button> </a>
-
+                        <p>Many business operations rely on emergency generators to secure critical functions within their organization. 					It is easy to ignore the fact that, as these units are driven by combustible engines,
+                        they also constitute a significant fire hazard. Dafo Forrex Fire Suppression Systems response
+                        rapidly to any increase in temperature. The Dafo system is developed to use worldwide in both cold and hot climate.
+                        It ensures maximum protection while being much more economical than previously available
+solutions like water sprinkler, dry chemical or CO2-systems.</p>
                     </MainText>
                 </Intro>
-                <PlayerContainer>
-                    <EmbedPlayer>
-                        <p>ska det vara länk som ovan eller inbäddad? Tänker att man kan visa den såhär i en större skärm iaf (som jag gjort nu, den är inte med på en tel)</p>
-                        <ReactPlayer
-                            url="https://youtu.be/pzBvZsKDHlE" width='auto'
-                            height='100%'
-                        />
-                    </EmbedPlayer>
-                </PlayerContainer>
             </FlexDiv1>
             <FlexDiv2>
                 <ContactUs>
                     <h2>Data Sheet</h2>
-                    <img src={UnceImage} alt="UNCE type-approved" className="largerImg" />
+                    <img src={UnceImage} alt="UNCE type-approved" />
                     <h2>For more information</h2>
-                    <h3 className="width90">Contact our representative</h3>
-                    <img src={JohanImage} alt="Johan Larsson" className="person" />
+                    <h3>Contact our representative</h3>
+                    <img src={JohanImage} alt="Johan Larsson" />
                     <div>
                         <ul>
                             <li> <h3>Johan Larsson</h3></li>
@@ -46,7 +37,7 @@ export const BusPage = () => {
                             <li>+971 55 143 60 88</li>
                         </ul>
                     </div>
-                    <img src={Shadi} alt="Shadi Abdulla" className="person" />
+                    <img src={Shadi} alt="Shadi Abdulla" />
                     <div>
                         <ul>
                             <li> <h3>Shadi Abdulla</h3></li>
@@ -55,11 +46,12 @@ export const BusPage = () => {
                             <li>+971 55 800 55 09</li>
                         </ul>
                     </div>
-                    <img src={contactUs} alt="Dafo Sales team" className="largerImg" />
+                    <img src={contactUs} alt="Dafo Sales team" />
                     <div>
                         <ul>
                             <li> <h3>Sales team</h3></li>
                             <li>Dafo Middle East</li>
+
                             <li><a href="mailto:sales@dafo-middle-east.com">sales@dafo-middle-east.com</a></li>
                         </ul>
                     </div>
@@ -70,10 +62,6 @@ export const BusPage = () => {
 }
 
 
-const Button = styled.button`
-color:red;
-margin:10px;
-`
 
 const Wrapper = styled.main`
 display:flex;
@@ -144,43 +132,19 @@ p{
     padding:0px;
     width:100%;
 }
-`
-
-const EmbedPlayer = styled.div`
-display:none;
-@media(min-width:676px){
-display:inline-block;
-margin:0 auto;
-height: 400px;
-}
 `;
-const PlayerContainer = styled.div`
-width:90%;
-height:auto;
-margin: 0 auto;
-`;
-
-
 const ContactUs = styled.article`
 width:100%;
 display:flex;
 flex-direction: column;
 align-items: center;
-.largerImg{
-    min-width:90%;
+img{
+    min-width:100%;
     height: auto;
-}
-.person{
-    width:unset;
-    width: 50% !important;
-}
-.width90{
-    width:80%;
 }
 ul{
     list-style:none;
     display: inline;
-    
 }
 li{
     padding: 10px 2px;
@@ -190,10 +154,6 @@ h3{
 }
 div{
     padding-bottom: 10px;
-}
-a{
-    text-decoration:none;
-    color:#1c1c1c;
 }
 `;
 
