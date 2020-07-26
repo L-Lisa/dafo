@@ -7,12 +7,13 @@ import { MiningConstruction } from "../pages/MiningConstruction"
 import { ContactUsPage } from "../pages/ContactUsPage"
 import { SiteMap } from "../pages/SiteMap"
 import { Footer } from "../components/Footer"
+import { Header } from "../components/Header"
 
 export const Directions = () => {
     return (
         <BrowserRouter>
 
-            {/*     <Nav /> */}
+            <Header />
             <main>
                 <Switch>
                     <Route path="/" exact>
