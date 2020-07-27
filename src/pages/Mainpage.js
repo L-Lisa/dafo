@@ -1,6 +1,6 @@
 import React from "react"
 import styled from 'styled-components/macro'
-import MainImg from "..//images/MainImg.png"
+import MainImgSml from "..//images/MainImgSml"
 import Buses from "..//images/ProductImg-Buses.jpg"
 import Mining from "..//images/ProductImg-Mining.jpg"
 import PowerGen from "..//images/ProductImg-powerGenerator.jpeg"
@@ -12,7 +12,7 @@ export const MainPage = () => {
         <Wrapper>
             <FlexDiv1>
                 <Intro>
-                    <img src={MainImg} alt="Dafo" />
+                    <img src={MainImgSml} alt="Dafo" />
                     <MainText>
                         <h1>Fire & rescue systems for your safety</h1>
                         <p>Since its beginnings back in 1919, Dafo Brand has developed into a modern, high-tech company. As the biggest Nordic supplier of fire suppression systems and fire safety equipment we can always provide you with the best solution. Our fire suppression systems are used worldwide and are installed on the assembly line by many of the world’s leading manufacturers. Our goal is to make sure all our customers are safe and secure.</p>
