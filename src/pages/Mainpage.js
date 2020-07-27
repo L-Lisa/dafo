@@ -1,11 +1,12 @@
 import React from "react"
 import styled from 'styled-components/macro'
-import MainImgSml from "..//images/MainImgSml"
+import MainImgSml from "..//images/MainImgSml.jpg"
 import Buses from "..//images/ProductImg-Buses.jpg"
 import Mining from "..//images/ProductImg-Mining.jpg"
 import PowerGen from "..//images/ProductImg-powerGenerator.jpeg"
 import contactUs from "..//images/contactUs.jpg"
 import { Link } from "react-router-dom"
+
 
 export const MainPage = () => {
     return (

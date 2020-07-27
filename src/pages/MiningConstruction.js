@@ -31,10 +31,10 @@ export const MiningConstruction = () => {
             <FlexDiv2>
                 <ContactUs>
                     <h2>Data Sheet</h2>
-                    <img src={UnceImage} alt="UNCE type-approved" />
+                    <img src={UnceImage} alt="UNCE type-approved" className="largerImg" />
                     <h2>For more information</h2>
-                    <h3>Contact our representative</h3>
-                    <img src={JohanImage} alt="Johan Larsson" />
+                    <h3 className="width90">Contact our representative</h3>
+                    <img src={JohanImage} alt="Johan Larsson" className="person" />
                     <div>
                         <ul>
                             <li> <h3>Johan Larsson</h3></li>
@@ -43,7 +43,7 @@ export const MiningConstruction = () => {
                             <li>+971 55 143 60 88</li>
                         </ul>
                     </div>
-                    <img src={Shadi} alt="Shadi Abdulla" />
+                    <img src={Shadi} alt="Shadi Abdulla" className="person" />
                     <div>
                         <ul>
                             <li> <h3>Shadi Abdulla</h3></li>
@@ -52,12 +52,11 @@ export const MiningConstruction = () => {
                             <li>+971 55 800 55 09</li>
                         </ul>
                     </div>
-                    <img src={contactUs} alt="Dafo Sales team" />
+                    <img src={contactUs} alt="Dafo Sales team" className="largerImg" />
                     <div>
                         <ul>
                             <li> <h3>Sales team</h3></li>
                             <li>Dafo Middle East</li>
-
                             <li><a href="mailto:sales@dafo-middle-east.com">sales@dafo-middle-east.com</a></li>
                         </ul>
                     </div>
@@ -145,13 +144,21 @@ width:100%;
 display:flex;
 flex-direction: column;
 align-items: center;
-img{
-    min-width:100%;
+.largerImg{
+    min-width:90%;
     height: auto;
+}
+.person{
+    width:unset;
+    width: 50% !important;
+}
+.width90{
+    width:80%;
 }
 ul{
     list-style:none;
     display: inline;
+    
 }
 li{
     padding: 10px 2px;
@@ -161,6 +168,10 @@ h3{
 }
 div{
     padding-bottom: 10px;
+}
+a{
+    text-decoration:none;
+    color:#1c1c1c;
 }
 `;
 
