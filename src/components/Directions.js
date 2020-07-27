@@ -8,6 +8,8 @@ import { ContactUsPage } from "../pages/ContactUsPage"
 import { SiteMap } from "../pages/SiteMap"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
+import { Downloads } from "../pages/Downloads"
+
 
 export const Directions = () => {
     return (
@@ -39,10 +41,9 @@ export const Directions = () => {
                     <Route path="/site-map" exact>
                         <SiteMap />
                     </Route>
-                    {/* 
-                    <Route path="/plants/:id" exact>
-                        <SinglePlantPage />
-                    </Route> */}
+                    <Route path="/downloads" exact>
+                        <Downloads />
+                    </Route>
                 </Switch>
             </main>
             <Footer />

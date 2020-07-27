@@ -23,6 +23,7 @@ export const Header = () => {
                     </span>
                 </div>
                 <div className="mini-nav">
+                    <Link to="/downloads">Downloads</Link>
                     <Link to="/contact-us">Contact</Link>
                     <Link to="/">Home</Link>
                 </div>
@@ -63,14 +64,37 @@ export const Header = () => {
                     }
                 </>
             </Nav>
+            <InlineNav>
+                <ul>
+                    <li>
+                        <NavLink to="#products">Products</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#services">Services</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#archives">Archives</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#about">About Dafo</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#news">News</NavLink>
+                    </li>
+                </ul>
+            </InlineNav>
         </HeaderWrapper >
 
     )
 }
 
 const HeaderWrapper = styled.main`
+background:white;
 box-sizing:border-box;
 width:100%;
+position: -webkit-sticky;
+position: sticky;
+top: 0;
 `;
 
 const TopHeader = styled.section`
@@ -87,7 +111,6 @@ div{
 span img{
     width: auto;
     max-height: 30px;
-    background:black;
     margin: 4px;
 }
 .mini-nav a{
@@ -101,6 +124,10 @@ const LogoHeader = styled.div`
 background:white;
 min-height:40px;
 width:auto;
+display:none;
+@media(min-width:676px){
+    display:inline;
+}
 `;
 
 const Nav = styled.nav`
@@ -121,6 +148,9 @@ const Hamburger = styled.div`
 .container {
   display: inline-block;
   cursor: pointer;
+  @media(min-width:676px){
+    display:none;
+}
 }
 
 .bar1, .bar2, .bar3 {
@@ -130,16 +160,20 @@ const Hamburger = styled.div`
   margin: 6px 0;
   transition: 0.4s;
 }
-
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+`;
+const InlineNav = styled.ul`
+width:100%;
+display:none;
+background:white;
+@media(min-width:676px){
+    display:inline;
+    ul{
+    list-style:none;
+    display:flex;
+    justify-content: space-evenly;
+} a{
+text-decoration:none;
+color:#626262;
 }
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
 }
-`
+`;
