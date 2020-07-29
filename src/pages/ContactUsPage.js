@@ -1,6 +1,6 @@
 import React from "react"
 import styled from 'styled-components/macro'
-/* import contactUs from "..//images/contactUs.jpg" */
+import contactUs from "..//images/contactUs.jpg"
 import DafoBlack from "..//images/DafoBlack.jpg"
 
 export const ContactUsPage = () => {
@@ -10,7 +10,7 @@ export const ContactUsPage = () => {
 
                 <h1>Contact Us</h1>
 
-                {/*   <img src={contactUs} alt="Contact Dafo Middle East" /> */}
+                <img src={contactUs} alt="Contact Dafo Middle East" />
                 <div>
                     <h3>Office</h3>
                     <p>Clover bay tower</p>

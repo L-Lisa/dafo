@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from 'styled-components/macro'
-import DafoBlack from "..//images/DafoBlack.jpg"
+import dafoMEred from "..//images/dafoMEred"
 import { Link, NavLink } from "react-router-dom"
 import facebookicon from "..//images/facebookicon.png"
 import youtubeicon from "..//images/youtubeicon.png"
@@ -31,7 +31,7 @@ export const Header = () => {
 
             <LogoHeader>
                 <span className="logo-box">
-                    <Link to="/"><img src={DafoBlack} alt="Dafo Middle East" /></Link>
+                    <Link to="/"><img src={dafoMEred} alt="Dafo Middle East" /></Link>
                 </span>
             </LogoHeader>
             <Nav>
