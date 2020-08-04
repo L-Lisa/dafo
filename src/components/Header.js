@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from 'styled-components/macro'
-import dafoMEred from "..//images/dafoMEred"
+import dafoMEred from "..//images/dafoMEred.jpg"
 import { Link, NavLink } from "react-router-dom"
 import facebookicon from "..//images/facebookicon.png"
 import youtubeicon from "..//images/youtubeicon.png"
@@ -10,8 +10,6 @@ export const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     return (
-
-
         < HeaderWrapper >
             <TopHeader>
                 <div className="social-media">
@@ -22,43 +20,43 @@ export const Header = () => {
                         < a href="https://www.youtube.com/user/dafobrand"><img src={youtubeicon} alt="Dafo youtube link" /></a>
                     </span>
                 </div>
-                <div className="mini-nav">
-                    <Link to="/downloads">Downloads</Link>
-                    <Link to="/contact-us">Contact</Link>
-                    <Link to="/">Home</Link>
-                </div>
+                <MiniNav>
+                    <NavLink to="/downloads">Downloads</NavLink>
+                    <NavLink to="/contact-us">Contact</NavLink>
+                    <NavLink to="/">Home</NavLink>
+                </MiniNav>
             </TopHeader>
 
             <LogoHeader>
-                <span className="logo-box">
-                    <Link to="/"><img src={dafoMEred} alt="Dafo Middle East" /></Link>
-                </span>
+
+                <Link to="/"><img src={dafoMEred} alt="Dafo Middle East" /></Link>
+
             </LogoHeader>
             <Nav>
                 <>
                     <Hamburger>
-                        <div class="container" onClick={() => setShowMenu(!showMenu)}>
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
-                            <div class="bar3"></div>
+                        <div className="container" onClick={() => setShowMenu(!showMenu)}>
+                            <div className="bar1"></div>
+                            <div className="bar2"></div>
+                            <div className="bar3"></div>
                         </div>
                     </Hamburger>
                     {showMenu &&
                         <ul>
                             <li>
-                                <NavLink to="#products">Products</NavLink>
+                                <NavLink to="/bus">Buses</NavLink>
                             </li>
                             <li>
-                                <NavLink to="#services">Services</NavLink>
+                                <NavLink to="/powergenerators">Power Generators</NavLink>
                             </li>
                             <li>
-                                <NavLink to="#archives">Archives</NavLink>
+                                <NavLink to="/mining-constructon">Mining & Construction</NavLink>
                             </li>
                             <li>
-                                <NavLink to="#about">About Dafo</NavLink>
+                                <NavLink to="/downloads">Info</NavLink>
                             </li>
                             <li>
-                                <NavLink to="#news">News</NavLink>
+                                <NavLink to="/contact-us">Contant</NavLink>
                             </li>
                         </ul>
                     }
@@ -67,19 +65,14 @@ export const Header = () => {
             <InlineNav>
                 <ul>
                     <li>
-                        <NavLink to="#products">Products</NavLink>
+                        <NavLink to="/powergenerators">Power Generators</NavLink>
                     </li>
                     <li>
-                        <NavLink to="#services">Services</NavLink>
+                        <NavLink to="/bus">Buses</NavLink>
                     </li>
+
                     <li>
-                        <NavLink to="#archives">Archives</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="#about">About Dafo</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="#news">News</NavLink>
+                        <NavLink to="/mining-constructon">Mining & Construction</NavLink>
                     </li>
                 </ul>
             </InlineNav>
@@ -113,18 +106,29 @@ span img{
     max-height: 30px;
     margin: 4px;
 }
-.mini-nav a{
+`;
+const MiniNav = styled.div`
+a{
+    display:none;
     color:white;
     text-decoration:none;
     margin:6px;
-}
-`;
+    transition: transform .2s;
+    &:hover{
+        color:gray;
+        transform: scale(1.1);
+    }
+@media(min-width:320px){
+    display:inline; 
+}}
 
+`;
 const LogoHeader = styled.div`
-background:white;
-min-height:40px;
-width:auto;
 display:none;
+img{
+width: 150px;
+padding: 20px;
+}
 @media(min-width:676px){
     display:inline;
 }
@@ -152,28 +156,41 @@ const Hamburger = styled.div`
     display:none;
 }
 }
-
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
   background-color: #333;
   margin: 6px 0;
   transition: 0.4s;
+  border-radius:2px;
 }
 `;
 const InlineNav = styled.ul`
-width:100%;
 display:none;
 background:white;
-@media(min-width:676px){
-    display:inline;
-    ul{
+ul{
+    width: 100%;
     list-style:none;
     display:flex;
-    justify-content: space-evenly;
-} a{
+    justify-content: center;
+    padding:20px 10px;
+    background:#a5a4a61c;
+}
+a{
 text-decoration:none;
+transition: transform .2s;
+padding:0 16px 0 0 ;
 color:#626262;
-}
-}
+&:hover{
+        color:black;
+}}
+li{
+    transition: transform .2s;
+    &:hover{
+        border-radius:5%;
+        transform: scale(1.1);
+    }}
+@media(min-width:676px){
+    display:inline;
+    }
 `;

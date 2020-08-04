@@ -2,6 +2,7 @@ import React from "react"
 import styled from 'styled-components/macro'
 import MainImgSml from "..//images/MainImgSml.jpg"
 import Buses from "..//images/ProductImg-Buses.jpg"
+import smeDxbTxt from "..//images/smeDbxTxt.jpg"
 import Mining from "..//images/ProductImg-Mining.jpg"
 import PowerGen from "..//images/ProductImg-powerGenerator.jpeg"
 import contactUs from "..//images/contactUs.jpg"
@@ -21,7 +22,6 @@ export const MainPage = () => {
                 </Intro>
 
                 <ProductsDiv>
-
                     <Link to="/powergenerators">
                         <PowerGeneratorImg className="product-block ">
                             <h4>Power Generator</h4>
@@ -43,24 +43,26 @@ export const MainPage = () => {
             <FlexDiv2>
                 <ContactUs>
                     <h2>Contact Us</h2>
-                    <img src={contactUs} alt="Contact Dafo here" />
-                    <div>We are here to help! <br />
+                    <ContactImg src={contactUs} alt="Contact Dafo here" />
+                    <div><p>We are here to help!<br />
                     For questions and technical support:
-                    <ul>
-                            <li>Telephone:<h3>+971 4 new number </h3></li>
+                    </p>
+                        <ul>
+                            <li>Telephone:<h3><br />+971 4 232 3957</h3></li>
 
-                            <li>E-mail: <h3>info@dafo-middle-east.com</h3></li>
+                            <li>E-mail:<br /> <h3>info@dafo-middle-east.com</h3></li>
                             <li><h3>Opening hours:</h3><p className="block"> Sun-Thu: 9.00am – 6.00pm</p>
                             </li>
                         </ul>
+                        <SmeSupport>
+                            <img src={smeDxbTxt} alt="Dafo supporting sme enterprise" />
+                        </SmeSupport>
                     </div>
+
                 </ContactUs>
-                <News>
-                    <h2>News</h2>
-                    <h5>IMPORT FROM TWITTER??</h5>
-                </News>
             </FlexDiv2>
-        </Wrapper>
+
+        </Wrapper >
     )
 }
 
@@ -79,6 +81,7 @@ h2{
     background:black;
     width: max-content;
     width: 100%;
+    max-width:300px;
     text-align: center;
     margin-block-start: 0;
     @media (min-width:676px){
@@ -89,22 +92,37 @@ h2{
 
 const FlexDiv1 = styled.section`
 margin: 0 auto;
+max-width: 1299px;
 @media(min-width: 676px){
     margin-right: 20px;
     width:65%;
 }
+    @media(min-width: 790px){
+    width:70%;
+}
+
 `;
 const FlexDiv2 = styled.section`
 margin: 0 auto;
 @media(min-width: 676px){
-    width:30%;
+    width:25%;
+}
+@media(min-width: 790px){
+    width:18%;
+    margin-left: 20px;
 }
 `;
+const ContactImg = styled.img`
+    max-width: 250px;
+`
 const Intro = styled.div`
 width: 100%;
 display:flex;
 flex-direction: column;
 align-items: center;
+@media(min-width:676px){
+    align-items: unset;
+}
 h1{
     font-weight:bold;
 }
@@ -128,12 +146,22 @@ width:100%;
     @media(min-width:676px){
     flex-direction: row;
     justify-content:space-around;
+    margin-top: -30px;
+    }
+    @media(min-width:1000px){
+        margin-top: unset;
+    }
+    @media(min-width:1700px){
+    flex-direction: row;
+    justify-content:center;
     }
 h4{
     font-size: 1rem;
     color: black;
-    background-color: #48464633;
-    width: 80%;
+    background-color: #fffffab0;
+    width: auto;
+    max-width: max-content;
+    padding: 10px 20px;
     margin:0 auto;
     margin-top: 90px;
     text-align: center;
@@ -185,20 +213,21 @@ padding: 4px;
     width:100%;
     }
 `;
-const News = styled.section`
-width:100%;
-display:flex;
-flex-direction: column;
-align-items: center;
-`;
+
+
 const ContactUs = styled.article`
+box-sizing:border-box;
 width:100%;
 display:flex;
+margin-top: 25px;
 flex-direction: column;
 align-items: center;
 img{
     width:250px;
     height: auto;
+}
+div{
+    padding: 10px 2px;
 }
 ul{
     list-style:none;
@@ -216,8 +245,22 @@ h3{
     margin-block-start:0;
 }
 @media (min-width: 676px){
+    margin-top: 0;
+    align-items: start;
     img{
         width:100%;
     }
+}
+`;
+const SmeSupport = styled.section`
+width:100%;
+display:flex;
+flex-direction: column;
+align-items: center;
+img{
+    width:80%;
+    margin: 0 auto;
+    max-width: 250px;
+    border: 1px solid #1c1c1c0f;
 }
 `;

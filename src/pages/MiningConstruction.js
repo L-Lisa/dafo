@@ -1,10 +1,7 @@
 import React from "react"
 import styled from 'styled-components/macro'
 import MiningConstructionImg from "..//images/MiningConstructionImg.jpg"
-import JohanImage from "..//images/JohanImage.jpg"
-import UnceImage from "..//images/UnceImage.png"
-import Shadi from "..//images/Shadi.jpg"
-import contactUs from "..//images/contactUs.jpg"
+import { Sidebar } from "components/Sidebar"
 
 export const MiningConstruction = () => {
     return (
@@ -29,38 +26,7 @@ export const MiningConstruction = () => {
 
             </FlexDiv1>
             <FlexDiv2>
-                <ContactUs>
-                    <h2>Data Sheet</h2>
-                    <img src={UnceImage} alt="UNCE type-approved" className="largerImg" />
-                    <h2>For more information</h2>
-                    <h3 className="width90">Contact our representative</h3>
-                    <img src={JohanImage} alt="Johan Larsson" className="person" />
-                    <div>
-                        <ul>
-                            <li> <h3>Johan Larsson</h3></li>
-                            <li>Dafo Middle East</li>
-                            <li>General Manager</li>
-                            <li>+971 55 143 60 88</li>
-                        </ul>
-                    </div>
-                    <img src={Shadi} alt="Shadi Abdulla" className="person" />
-                    <div>
-                        <ul>
-                            <li> <h3>Shadi Abdulla</h3></li>
-                            <li>Dafo Middle East</li>
-                            <li>Sales Manager</li>
-                            <li>+971 55 800 55 09</li>
-                        </ul>
-                    </div>
-                    <img src={contactUs} alt="Dafo Sales team" className="largerImg" />
-                    <div>
-                        <ul>
-                            <li> <h3>Sales team</h3></li>
-                            <li>Dafo Middle East</li>
-                            <li><a href="mailto:sales@dafo-middle-east.com">sales@dafo-middle-east.com</a></li>
-                        </ul>
-                    </div>
-                </ContactUs>
+                <Sidebar />
             </FlexDiv2>
 
         </Wrapper>
@@ -75,20 +41,12 @@ margin: 0;
   padding: 0;
   box-sizing: border-box;
 @media (min-width: 676px) {
+    padding-top: 45px;
         flex-direction:row;
         flex-wrap:wrap;
+        width: 90%;
+        margin: 0 auto;
     }
-    h2{
-    color: white;
-    font-weight:bold;
-    background:black;
-    width: max-content;
-    width: 100%;
-    text-align: center;
-    margin-block-start: 0;
-@media (min-width: 676px) {
-    padding-bottom: 5px;
-    }}
 `;
 
 const FlexDiv1 = styled.section`
@@ -136,42 +94,6 @@ p{
 @media(min-width:676px){
     padding:0px;
     width:100%;
-}
-`;
-
-const ContactUs = styled.article`
-width:100%;
-display:flex;
-flex-direction: column;
-align-items: center;
-.largerImg{
-    min-width:90%;
-    height: auto;
-}
-.person{
-    width:unset;
-    width: 50% !important;
-}
-.width90{
-    width:80%;
-}
-ul{
-    list-style:none;
-    display: inline;
-    
-}
-li{
-    padding: 10px 2px;
-}
-h3{
-    display: inline;
-}
-div{
-    padding-bottom: 10px;
-}
-a{
-    text-decoration:none;
-    color:#1c1c1c;
 }
 `;
 

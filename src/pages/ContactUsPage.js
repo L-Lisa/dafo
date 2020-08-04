@@ -7,21 +7,19 @@ export const ContactUsPage = () => {
     return (
         <ContactContainer>
             <Box1>
-
-                <h1>Contact Us</h1>
-
-                <img src={contactUs} alt="Contact Dafo Middle East" />
                 <div>
-                    <h3>Office</h3>
+                    <h1>Dubai office</h1>
+                    <img src={contactUs} alt="Contact Dafo Middle East" />
+                    <h3>Location</h3>
                     <p>Clover bay tower</p>
                     <p>Office 1106, Business Bay</p>
                     <p>Dafo Middle East</p>
                     <p>Dubai, UAE</p>
-                    <h3>Warehouse and delivery address</h3>
+                    <h3>Warehouse & <br />delivery address</h3>
                     <p>Dafo Middle East</p>
                     <p>Dry dock world</p>
                     <p>Warehouse no 118 </p>
-                    <p>Jadaf, near Creek metro station</p>
+                    <p>Jadaf, near Creek metro</p>
                     <p>Dubai, UAE	</p>
                 </div>
             </Box1>
@@ -29,7 +27,7 @@ export const ContactUsPage = () => {
                 <h2>Contact us</h2>
                 <Contacts>
                     <img src={DafoBlack} alt="Dafo Middle East" />
-                    <p>+971 4 new number???</p>
+                    <p>+971 4 232 3957</p>
                     <p><a href="mailto:infos@dafo-middle-east.com">info@dafo-middle-east.com</a></p>
                 </Contacts>
                 <h2>Opening hours</h2>
@@ -48,48 +46,81 @@ export const ContactUsPage = () => {
 
 const ContactContainer = styled.main`
 display:flex;
-flex-direction:column-reverse;
+flex-direction:column;
 width:100%;
 height:auto;
+padding-bottom:50px;
 @media only screen and (min-width : 480px) {
 flex-direction:row;
-justify-content:space-between;
-margin-top: 5px;
+justify-content:space-around;
+margin-top: 45px;
+justify-content: center;
 } 
-@media only screen and (min-width : 678px) {
-    width:80%;
+@media only screen and (min-width : 600px) {
+    width:70%;
     margin: 0 auto; 
-    margin-top: 15px;
+    margin-top: 25px;
     justify-content:space-around;
 }
 @media only screen and (min-width : 992px){
-    margin-top: 25px;
+    margin-top: 35px;
     width:60%;
 }
 @media only screen and (min-width : 1200px){
     justify-content:center;
+    width: 50%;
 }
 `;
 const Box1 = styled.section`
 display:flex;
 flex-direction:column;
+justify-content: flex-start;
+width:100%;
+margin: 0 auto;
+align-items: center;
+text-align:center;
+margin-bottom: 20px;
+max-width: 300px;
+margin-right: 0;
+@media only screen and (min-width : 320px){
+    text-align:unset;
+}
+@media only screen and (min-width : 390px){
+    max-width:unset;
+}
+@media only screen and (min-width : 480px){
+    width: 40%;
+    max-width:500px;
+    }
+h1{
+    width:auto;
+    margin-bottom:0;
+    padding: 0 5px 0 5px;
+    @media only screen and (min-width : 480px){
+    margin:0;
+ }}
+ img{
+     width:60%;
+     max-width:300px;
+     padding: 0 5px 0 5px;
+ }
 div{
-    width: 100%;
+    width: auto;
+    margin: 0 auto;
     padding: 0 5px 0 5px;
     box-sizing: border-box;
-}
-h1{
-    margin-bottom:0;
-    @media only screen and (min-width : 480px){
-        margin:0;
+    @media only screen and (min-width : 390px){
+        width: 200px;
     }
+    @media only screen and (min-width : 480px){
+    width:100%
+    }
+    
 }
 p{
+    width:auto;
     margin-top: 4px;
     margin-bottom: 2px;
-}
-h4{
-    margin-bottom: 0;
 }
 `;
 
@@ -97,8 +128,15 @@ const Box2 = styled.section`
 display:flex;
 flex-direction:column;
 width:100%;
+justify-content: flex-start;
+align-items: center;
+max-width: 300px;
+margin: 0 auto;
+@media only screen and (min-width : 480px){
+    margin-left: 0;
+    }
 div{
-    width: 100%;
+    width: auto;
     padding: 0 5px 0 5px;
     box-sizing: border-box;
 }
