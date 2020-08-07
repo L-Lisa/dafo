@@ -2,12 +2,12 @@ import React from "react"
 import styled from 'styled-components/macro'
 import MainImgSml from "..//images/MainImgSml.jpg"
 import Buses from "..//images/ProductImg-Buses.jpg"
-import smeDxbTxt from "..//images/smeDbxTxt.jpg"
+
 import Mining from "..//images/ProductImg-Mining.jpg"
 import PowerGen from "..//images/ProductImg-powerGenerator.jpeg"
 import contactUs from "..//images/contactUs.jpg"
 import { Link } from "react-router-dom"
-
+import { Timeline } from 'react-twitter-widgets'
 
 export const MainPage = () => {
     return (
@@ -54,9 +54,21 @@ export const MainPage = () => {
                             <li><h3>Opening hours:</h3><p className="block"> Sun-Thu: 9.00am – 6.00pm</p>
                             </li>
                         </ul>
-                        <SmeSupport>
-                            <img src={smeDxbTxt} alt="Dafo supporting sme enterprise" />
-                        </SmeSupport>
+                        {/*  <h2>News</h2> */}
+                        <TwitterBox>
+                            <Timeline
+                                renderError={(_err) => <p>Could not load Twitter</p>}
+                                dataSource={{
+                                    sourceType: 'profile',
+                                    screenName: 'Dafovehicle',
+                                    width: "100%",
+
+                                }}
+                                options={{
+                                    height: '700',
+                                }}
+                            />
+                        </TwitterBox>
                     </div>
 
                 </ContactUs>
@@ -81,7 +93,7 @@ h2{
     background:black;
     width: max-content;
     width: 100%;
-    max-width:300px;
+    max-width:316px;
     text-align: center;
     margin-block-start: 0;
     @media (min-width:676px){
@@ -94,7 +106,7 @@ const FlexDiv1 = styled.section`
 margin: 0 auto;
 max-width: 1299px;
 @media(min-width: 676px){
-    margin-right: 20px;
+    margin-right: 10px;
     width:65%;
 }
     @media(min-width: 790px){
@@ -108,8 +120,8 @@ margin: 0 auto;
     width:25%;
 }
 @media(min-width: 790px){
-    width:18%;
-    margin-left: 20px;
+    width:19%;
+    margin-left: 10px;
 }
 `;
 const ContactImg = styled.img`
@@ -232,13 +244,17 @@ div{
 ul{
     list-style:none;
     display: inline;
+    margin: 0;
 }
 li{
-    padding: 10px 2px;
+    padding: 6px 2px;
 }
 h3{
     display: inline;
     font-size: 1rem;
+}
+p{
+    margin: 0;
 }
 .block{
     display:block;
@@ -252,15 +268,31 @@ h3{
     }
 }
 `;
-const SmeSupport = styled.section`
-width:100%;
-display:flex;
-flex-direction: column;
-align-items: center;
-img{
-    width:80%;
-    margin: 0 auto;
-    max-width: 250px;
-    border: 1px solid #1c1c1c0f;
+const TwitterBox = styled.div`
+height: 400px;
+overflow: scroll;
+@media (min-width: 676px){
+   height:160px;
 }
-`;
+@media (min-width: 800px){
+   height:200px;
+}
+@media (min-width: 900px){
+   height:230px;
+}
+@media (min-width: 1000px){
+   height:270px;
+}
+@media (min-width: 1100px){
+   height:290px;
+}
+@media (min-width: 1200px){
+   height:360px;
+}
+@media (min-width: 1400px){
+   height:390px;
+}
+@media (min-width: 1600px){
+   height:480px;
+}
+`; 

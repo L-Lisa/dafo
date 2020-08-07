@@ -2,7 +2,7 @@ import React from "react"
 import styled from 'styled-components/macro'
 import DafoBlack from "..//images/DafoBlack.jpg"
 import { Link } from "react-router-dom"
-
+import smeDxbTxt from "..//images/smeDbxTxt.jpg"
 
 export const Footer = () => {
     return (
@@ -10,6 +10,9 @@ export const Footer = () => {
             <Padding>
                 <Box1>
                     <img src={DafoBlack} alt="Dafo Middle East" />
+                    <SmeSupport>
+                        <img src={smeDxbTxt} alt="Dafo supporting sme enterprise" />
+                    </SmeSupport>
                 </Box1>
                 <Box2>
                     <Link to="/"> <h1>Dafo-middle-east.com/</h1></Link> <br />
@@ -21,6 +24,8 @@ export const Footer = () => {
                     <a href="https://www.facebook.com/dafobrand">Facebook</a>
                     <br />
                     < a href="https://www.youtube.com/user/dafobrand">Youtube</a>
+                    <br />
+                    < a href="https://twitter.com/Dafovehicle">Twitter</a>
                 </Box3>
                 <Box4>
                     <h1>Dafo Middle East</h1>
@@ -115,5 +120,18 @@ margin:5%;
 @media only screen and (min-width : 678px) {
     width:20%;
     margin:2%;
+}
+`;
+const SmeSupport = styled.section`
+width: 50%;
+align-self: flex-start;
+display:flex;
+flex-direction: column;
+align-items: center;
+img{
+    width:80%;
+    margin: 0 auto;
+    max-width: 250px;
+    border: 1px solid #1c1c1c0f;
 }
 `;

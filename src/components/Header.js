@@ -4,7 +4,7 @@ import dafoMEred from "..//images/dafoMEred.jpg"
 import { Link, NavLink } from "react-router-dom"
 import facebookicon from "..//images/facebookicon.png"
 import youtubeicon from "..//images/youtubeicon.png"
-
+import twittericon from "..//images/twittericon.png"
 
 export const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -12,14 +12,12 @@ export const Header = () => {
     return (
         < HeaderWrapper >
             <TopHeader>
-                <div className="social-media">
-                    <span className="facebook-box">
-                        <a href="https://www.facebook.com/dafobrand"><img src={facebookicon} alt="Dafo Facebook link" /></a>
-                    </span>
-                    <span>
-                        < a href="https://www.youtube.com/user/dafobrand"><img src={youtubeicon} alt="Dafo youtube link" /></a>
-                    </span>
-                </div>
+                <SocialMediaBox>
+                    < a href="https://www.youtube.com/user/dafobrand"><LogoIcon src={youtubeicon} alt="Dafo youtube link" /></a>
+                    <a href="https://www.facebook.com/dafobrand"><LogoIcon src={facebookicon} alt="Dafo Facebook link" /></a>
+                    < a href="https://twitter.com/Dafovehicle"><LogoIcon src={twittericon} alt="Dafo twitter link" /></a>
+                </SocialMediaBox>
+
                 <MiniNav>
                     <NavLink to="/downloads">Downloads</NavLink>
                     <NavLink to="/contact-us">Contact</NavLink>
@@ -27,52 +25,70 @@ export const Header = () => {
                 </MiniNav>
             </TopHeader>
 
-            <LogoHeader>
 
-                <Link to="/"><img src={dafoMEred} alt="Dafo Middle East" /></Link>
-
-            </LogoHeader>
             <Nav>
-                <>
+                <BurgerBox>
+                    <LogoHeader>
+                        <Link to="/"><img src={dafoMEred} alt="Dafo Middle East" /></Link>
+                    </LogoHeader>
+
                     <Hamburger>
                         <div className="container" onClick={() => setShowMenu(!showMenu)}>
                             <div className="bar1"></div>
                             <div className="bar2"></div>
                             <div className="bar3"></div>
+
+
                         </div>
                     </Hamburger>
-                    {showMenu &&
-                        <ul>
-                            <li>
-                                <NavLink to="/bus">Buses</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/powergenerators">Power Generators</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/mining-constructon">Mining & Construction</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/downloads">Info</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/contact-us">Contant</NavLink>
-                            </li>
-                        </ul>
-                    }
-                </>
+                </BurgerBox>
+                {showMenu &&
+                    <ul>
+                        <li>
+                            <NavLink to="#">Products</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="#">Services</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="#">Archives</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="#">About Dafo</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="#">News</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/downloads">Downloads</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/contact-us">Contact</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/">Home</NavLink>
+                        </li>
+                    </ul>
+                }
+
             </Nav>
             <InlineNav>
                 <ul>
                     <li>
-                        <NavLink to="/powergenerators">Power Generators</NavLink>
+                        <NavLink to="#">Products</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/bus">Buses</NavLink>
+                        <NavLink to="#">Services</NavLink>
                     </li>
 
                     <li>
-                        <NavLink to="/mining-constructon">Mining & Construction</NavLink>
+                        <NavLink to="#">Archives</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#">About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#"></NavLink>
                     </li>
                 </ul>
             </InlineNav>
@@ -91,25 +107,30 @@ top: 0;
 `;
 
 const TopHeader = styled.section`
+box-sizing:border-box;
 background:black;
+width:100%;
 padding:10px;
-height:50px;
-display:flex;
-justify-content:space-between;
-div{
-    width:auto;
-    display:flex;
-    align-items: center;
-}
-span img{
-    width: auto;
-    max-height: 30px;
-    margin: 4px;
+height:60px;
+display:none;
+@media(min-width:676px){
+    display:flex; 
+    justify-content:space-between;
 }
 `;
+
+const SocialMediaBox = styled.span`
+    width: 35%;
+`
+const LogoIcon = styled.img`
+height:30px;
+margin-right:3px;
+`
 const MiniNav = styled.div`
+width:300px;
+display:flex;
+justify-content: flex-end;
 a{
-    display:none;
     color:white;
     text-decoration:none;
     margin:6px;
@@ -117,21 +138,22 @@ a{
     &:hover{
         color:gray;
         transform: scale(1.1);
-    }
-@media(min-width:320px){
-    display:inline; 
-}}
+    }}
 
 `;
 const LogoHeader = styled.div`
-display:none;
 img{
 width: 150px;
 padding: 20px;
 }
-@media(min-width:676px){
-    display:inline;
+@media(min-width:500px){
+    display:none;
 }
+`;
+const BurgerBox = styled.section`
+display:flex;
+align-items: center;
+justify-content:space-between;
 `;
 
 const Nav = styled.nav`
@@ -149,6 +171,7 @@ a{
 }
 `;
 const Hamburger = styled.div`
+margin-right: 5px;
 .container {
   display: inline-block;
   cursor: pointer;
@@ -159,10 +182,11 @@ const Hamburger = styled.div`
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #333;
+  background-color: #ed273e;
   margin: 6px 0;
   transition: 0.4s;
   border-radius:2px;
+
 }
 `;
 const InlineNav = styled.ul`
@@ -194,3 +218,4 @@ li{
     display:inline;
     }
 `;
+
