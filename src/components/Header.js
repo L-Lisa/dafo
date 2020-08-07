@@ -146,7 +146,7 @@ img{
 width: 150px;
 padding: 20px;
 }
-@media(min-width:500px){
+@media(min-width:676px){
     display:none;
 }
 `;
