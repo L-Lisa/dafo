@@ -70,6 +70,7 @@ flex-direction:row;
 flex-wrap:wrap;
 background:black;
 color:white;
+justify-content:center;
 `
 const Box1 = styled.div`
 width:100%;
@@ -123,7 +124,7 @@ margin:5%;
 }
 `;
 const SmeSupport = styled.section`
-width: 50%;
+width: 25%;
 align-self: flex-start;
 display:flex;
 flex-direction: column;

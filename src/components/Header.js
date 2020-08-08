@@ -152,8 +152,12 @@ padding: 20px;
 `;
 const BurgerBox = styled.section`
 display:flex;
+flex-direction:column;
 align-items: center;
 justify-content:space-between;
+@media(min-width:319px){
+    flex-direction:row;
+}
 `;
 
 const Nav = styled.nav`
