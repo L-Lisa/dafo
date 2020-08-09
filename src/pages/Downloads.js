@@ -1,44 +1,41 @@
 import React, { useState } from "react"
 import styled from 'styled-components/macro'
 import { Mailinglist } from "../components/Mailinglist"
-
+import { Accordion } from "../components/Accordion"
 export const Downloads = () => {
     /*   /*  const [email, setEmail] = useState("");
        const [fName, setFName] = useState("");
        const [lName, setLName] = useState(""); */
     const [showInfo, setShowInfo] = useState(false)
 
-    /*  const handleSubmit = event => {
-         event.preventDefault();
-         setShowInfo(true);
-     }; */
+    const handleSubmit = event => {
+        event.preventDefault();
+        setShowInfo(true);
+    };
+
     return (
         <DownloadsWrapper>
-            {/*   {!showInfo ? ( */}
-            <>
-                <IntroDiv>
-                    <h1>Get more information</h1> <p>leave your details here to join mailing list and get instant access to all our downloadable information</p>
-                </IntroDiv>
-                <FormBox>
+            {!showInfo ? (
+                <Main>
+                    <IntroDiv>
+                        <h1>Get more information</h1> <p>leave your details here to join mailing list and get instant access to all our downloadable information</p>
+                    </IntroDiv>
+                    <FormBox>
 
-                    <Mailinglist />
+                        <Mailinglist />
 
-                </FormBox>
-            </>
-            {/* ) : ( */}
-            {/*  {showInfo && */}
-            <DownloadsBox>
-                <p>Thank you, we are please to have you on our mailinglist, we will keep you updated. Find all the downloads here below.</p>
-                <a href="https://dafomiddleeast.sharepoint.com/:f:/s/download/Ek7FJm7dMDxEgeDksVp_mnwBVvz-2dNZWNtNqQZsqT3TIg?e=ZujkFD">Continue to Downloads</a>
-                <Filesdiv>
+                    </FormBox>
+                </Main>
+            ) : (
+                    /*   {showInfo &&  */
+                    <DownloadsBox>
+                        <Accordion />
 
-                </Filesdiv>
+                    </DownloadsBox>
 
-            </DownloadsBox>
-            {/*       } */}
 
-            {/*       )} */}
-        </DownloadsWrapper>
+                )}
+        </DownloadsWrapper >
     )
 }
 
@@ -67,7 +64,14 @@ align-content:center;
   width:80%;
 }
 `;
-
+const Main = styled.main`
+display:flex;
+margin: 50px 0;
+flex-direction: column;
+@media only screen and (min-width : 676px) {
+  flex-direction: row;
+}
+`
 const FormBox = styled.section`
 width:100%;
 display:flex;
@@ -75,6 +79,13 @@ align-items:center;
 margin: 0 auto;
 border: 1px solid #1c1c1c0f;
 box-shadow: 2px 2px 10px 2px rgb(207 204 204 / 70%);
+@media only screen and (min-width : 400px) {
+  width:80%;
+}
+@media only screen and (min-width : 990px) {
+  width:80%;
+  max-width: 550px;
+}
 `;
 
 const IntroDiv = styled.div`
