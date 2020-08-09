@@ -202,7 +202,6 @@ ul{
     display:flex;
     justify-content: center;
     padding:20px 10px;
-    background:#a5a4a61c;
 }
 a{
 text-decoration:none;

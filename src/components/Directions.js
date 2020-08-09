@@ -41,8 +41,10 @@ export const Directions = () => {
                     <Route path="/site-map" exact>
                         <SiteMap />
                     </Route>
+
                     <Route path="/downloads" exact>
                         <Downloads />
+
                     </Route>
                 </Switch>
             </main>

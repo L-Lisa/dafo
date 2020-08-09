@@ -10,24 +10,17 @@ export const Footer = () => {
             <Padding>
                 <Box1>
                     <img src={DafoBlack} alt="Dafo Middle East" />
-                    <SmeSupport>
-                        <img src={smeDxbTxt} alt="Dafo supporting sme enterprise" />
-                    </SmeSupport>
+
                 </Box1>
                 <Box2>
-                    <Link to="/"> <h1>Dafo-middle-east.com/</h1></Link> <br />
-                    <Link to="/contact-us">Contact</Link><br />
-                    <Link to="/site-map">Site-map</Link>
-                </Box2>
-                <Box3>
                     <h1>Follow Dafo</h1>
                     <a href="https://www.facebook.com/dafobrand">Facebook</a>
                     <br />
                     < a href="https://www.youtube.com/user/dafobrand">Youtube</a>
                     <br />
                     < a href="https://twitter.com/Dafovehicle">Twitter</a>
-                </Box3>
-                <Box4>
+                </Box2>
+                <Box3>
                     <h1>Dafo Middle East</h1>
                     <p>
                         Clover bay tower<br />
@@ -40,6 +33,16 @@ export const Footer = () => {
                         <a href="mailto:info@dafo-middle-east.com">info@dafo-middle-east.com</a>
 
                     </p>
+
+                </Box3>
+                <Box4>
+                    <Link to="/"> <h1>Dafo-middle-east.com/</h1></Link>
+                    <Link to="/contact-us">Contact</Link><br />
+                    <Link to="/site-map">Site-map</Link>
+
+                    <SmeSupport>
+                        <img src={smeDxbTxt} alt="Dafo supporting sme enterprise" />
+                    </SmeSupport>
                 </Box4>
             </Padding>
         </FooterContainer>
@@ -124,9 +127,11 @@ margin:5%;
 }
 `;
 const SmeSupport = styled.section`
-width: 25%;
+width: 40%;
 align-self: flex-start;
 display:flex;
+margin-left:-5px;
+margin-top:5px;
 flex-direction: column;
 align-items: center;
 img{
