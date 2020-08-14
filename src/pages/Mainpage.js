@@ -54,22 +54,23 @@ export const MainPage = () => {
                             <li><h3>Opening hours:</h3><p className="block"> Sun-Thu: 9.00am – 6.00pm</p>
                             </li>
                         </ul>
-                        {/*  <h2>News</h2> */}
-                        <TwitterBox>
-                            <Timeline
-                                renderError={(_err) => <p>Could not load Twitter</p>}
-                                dataSource={{
-                                    sourceType: 'profile',
-                                    screenName: 'Dafovehicle',
-                                    width: "100%",
-
-                                }}
-                                options={{
-                                    height: '700',
-                                }}
-                            />
-                        </TwitterBox>
                     </div>
+                    {/*  <h2>News</h2> */}
+                    <TwitterBox>
+                        <Timeline
+                            renderError={(_err) => <p>Could not load Twitter</p>}
+                            dataSource={{
+                                sourceType: 'profile',
+                                screenName: 'Dafovehicle',
+                                width: "100%",
+
+                            }}
+                            options={{
+                                height: '700',
+                            }}
+                        />
+                    </TwitterBox>
+
 
                 </ContactUs>
             </FlexDiv2>

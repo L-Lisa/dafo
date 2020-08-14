@@ -45,14 +45,14 @@ const Wrapper = styled.main`
 display:flex;
 flex-direction:column;
 margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+padding: 0;
+box-sizing: border-box;
 @media (min-width: 676px) {
     padding-top: 45px;
-        flex-direction:row;
-        flex-wrap:wrap;
-        width: 90%;
-        margin: 0 auto;
+    flex-direction:row;
+    flex-wrap:wrap;
+    width: 90%;
+    margin: 0 auto;
     }
 `;
 
@@ -70,15 +70,18 @@ min-width: 300px;
     min-width:unset;
     width:30%;
 }
-img{
-    width:300px;
-    height:auto;
-    @media(min-width:676px){
+@media(min-width:1200px){
     min-width:unset;
-    width:100%;
+    width:25%;
+    margin-left:5px;
 }
+@media(min-width:1500px){
+    min-width:unset;
+    width:20%;
+    margin-left:10px;
 }
 `;
+
 const Intro = styled.div`
 width: 100%;
 display:flex;

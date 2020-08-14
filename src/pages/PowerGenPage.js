@@ -58,13 +58,15 @@ min-width: 300px;
     min-width:unset;
     width:30%;
 }
-img{
-    width:300px;
-    height:auto;
-    @media(min-width:676px){
+@media(min-width:1200px){
     min-width:unset;
-    width:100%;
+    width:25%;
+    margin-left:5px;
 }
+@media(min-width:1500px){
+    min-width:unset;
+    width:20%;
+    margin-left:10px;
 }
 `;
 const Intro = styled.div`

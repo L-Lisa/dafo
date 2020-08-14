@@ -1,40 +1,110 @@
 import React, { useState } from "react"
 import styled from 'styled-components/macro'
 import { Mailinglist } from "../components/Mailinglist"
-import { Accordion } from "../components/Accordion"
+import foldericon from "../images/foldericon.png"
+
 export const Downloads = () => {
-    /*   /*  const [email, setEmail] = useState("");
-       const [fName, setFName] = useState("");
-       const [lName, setLName] = useState(""); */
+    const [email, setEmail] = useState("");
+    const [fName, setFName] = useState("");
+    const [lName, setLName] = useState("");
     const [showInfo, setShowInfo] = useState(false)
 
     const handleSubmit = event => {
         event.preventDefault();
-        setShowInfo(true);
+
+        /*   setShowInfo("true"); */
     };
 
     return (
         <DownloadsWrapper>
-            {!showInfo ? (
-                <Main>
-                    <IntroDiv>
-                        <h1>Get more information</h1> <p>leave your details here to join mailing list and get instant access to all our downloadable information</p>
-                    </IntroDiv>
-                    <FormBox>
+            {/*   {!showInfo ? ( */}
+            <Main>
+                <IntroDiv>
+                    <h1>Get instant access</h1> <p>leave your details here to join mailing list and get access to brows and download all folders</p>
+                </IntroDiv>
+                <FormBox>
+                    <div id="mc_embed_signup">
+                        <Form
+                            action="https://gmail.us17.list-manage.com/subscribe/post-json?u=ddf4337f8aa288503ec5cf4fb&amp;id=2b430cfaa9&c=?"
 
-                        <Mailinglist />
+                            /*   action="https://dafo-middle-east.us4.list-manage.com/subscribe/post-json?u=4fc9766f7a3940cb4177774a4&amp;id=93f2cf16ba&c=?" */
+                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate"
+                            target="hiddenFrame" novalidate
+                        >
+                            <div id="mc_embed_signup_scroll">
+                                <h2>Get news and updates</h2>
+                                <div className="mc-field-group">
+                                    <label htmlFor="mce-EMAIL">Email Address <span className="asterisk">*</span>
+                                    </label>
+                                    <input
+                                        value={email}
+                                        type="email"
+                                        required
+                                        name="EMAIL"
+                                        className="required email"
+                                        id="mce-EMAIL"
+                                        onChange={event => setEmail(event.target.value)}
+                                    />
+                                </div>
+                                <div className="mc-field-group">
+                                    <label htmlFor="mce-FNAME">First Name </label>
+                                    <input
+                                        type="text"
+                                        required
+                                        value={fName}
+                                        name="FNAME"
+                                        className=""
+                                        id="mce-FNAME"
+                                        onChange={event => setFName(event.target.value)}
+                                    />
+                                </div>
+                                <div className="mc-field-group">
+                                    <label htmlFor="mce-LNAME">Last Name </label>
+                                    <input
+                                        type="text"
+                                        value={lName}
+                                        name="LNAME"
+                                        className=""
+                                        id="mce-LNAME"
+                                        onChange={event => setLName(event.target.value)} />
+                                </div>
+                                <div id="mce-responses" className="clear">
+                                    <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
+                                    <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
+                                </div>
+                                {/* <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> */}
+                                <div style={{ position: "absolute", left: "-5000px", }} aria-hidden="true">
+                                    <input type="text"
+                                        name="b_4fc9766f7a3940cb4177774a4_93f2cf16ba"
+                                        tabIndex="-1"
+                                        value=" " />
+                                </div>
+                                <div>
+                                    <div className="clear" >
+                                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                                            className="button"
+                                        />
+                                        <div className="indicates-required"><span className="asterisk">*</span> indicates required</div>
+                                        {/*  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                                        <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script> */}
+                                    </div></div>
+                            </div>
+                        </Form>
+                        <iframe onLoad={() => setShowInfo(true)} name="hiddenFrame" src="about:blank" style={{ display: 'none' }}></iframe>
+                    </div>
+                </FormBox>
+            </Main>
 
-                    </FormBox>
-                </Main>
-            ) : (
-                    /*   {showInfo &&  */
-                    <DownloadsBox>
-                        <Accordion />
+            {showInfo &&
+                <DownloadsBox>
+                    <FolderBox href=" https://dafomiddleeast.sharepoint.com/sites/download/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fdownload%2FShared%20Documents%2FDafo%20files&p=true&originalPath=aHR0cHM6Ly9kYWZvbWlkZGxlZWFzdC5zaGFyZXBvaW50LmNvbS86Zjovcy9kb3dubG9hZC9FazdGSm03ZE1EeEVnZURrc1ZwX21ud0JWdnotMmROWldOdE5xUVpzcVQzVElnP3J0aW1lPTdSbUh5enM4MkVn">
+                        <h2>Thank you, we are happy to have you on our mailing list</h2>
+                        <h3>Please follow this link to brows the downloadable files</h3>
+                        <AccessButton>Acess All Files</AccessButton>
+                    </FolderBox>
+                </DownloadsBox>
+            }
 
-                    </DownloadsBox>
-
-
-                )}
         </DownloadsWrapper >
     )
 }
@@ -75,7 +145,7 @@ flex-direction: column;
 const FormBox = styled.section`
 width:100%;
 display:flex;
-align-items:center;
+justify-content: center;
 margin: 0 auto;
 border: 1px solid #1c1c1c0f;
 box-shadow: 2px 2px 10px 2px rgb(207 204 204 / 70%);
@@ -104,7 +174,7 @@ div{
 label{
     display:flex;
     width: 110px;
-    margin-bottom: 15px;
+    margin-top: 15px;
 }
 input{
     margin: 4px;
@@ -113,3 +183,17 @@ input{
 const DownloadsBox = styled.section`
 
 `;
+const FolderBox = styled.a`
+width: 50%;
+background-image: url(${foldericon});
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+h2 h3{
+    text-decoration:none;
+    color:#1c1c1c;
+}
+`;
+const AccessButton = styled.button`
+width: 90%;
+`

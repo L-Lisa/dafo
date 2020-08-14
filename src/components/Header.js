@@ -8,7 +8,7 @@ import twittericon from "..//images/twittericon.png"
 
 export const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
-
+    const [showProducts, setShowProducts] = useState(false)
     return (
         < HeaderWrapper >
             <TopHeader>
@@ -45,7 +45,7 @@ export const Header = () => {
                 {showMenu &&
                     <ul>
                         <li>
-                            <NavLink to="#">Products</NavLink>
+                            <NavLink to="#" >Products</NavLink>
                         </li>
                         <li>
                             <NavLink to="#">Services</NavLink>
@@ -75,7 +75,7 @@ export const Header = () => {
             <InlineNav>
                 <ul>
                     <li>
-                        <NavLink to="#">Products</NavLink>
+                        <NavLink to="#" onClick={() => setShowProducts(!showProducts)}>Products</NavLink>
                     </li>
                     <li>
                         <NavLink to="#">Services</NavLink>
@@ -92,6 +92,19 @@ export const Header = () => {
                     </li>
                 </ul>
             </InlineNav>
+            {showProducts &&
+                <InlineNav2>
+                    <Li2>
+                        <NavLink to="/bus">Buses</NavLink>
+                    </Li2>
+                    <Li2>
+                        <NavLink to="/powergenerators">Powergenerators</NavLink>
+                    </Li2>
+                    <Li2>
+                        <NavLink to="/mining-constructon">Mining & Construction</NavLink>
+                    </Li2>
+                </InlineNav2>
+            }
         </HeaderWrapper >
 
     )
@@ -176,6 +189,9 @@ a{
 `;
 const Hamburger = styled.div`
 margin-right: 5px;
+@media(min-width:319px){
+    margin-right:8px;
+}
 .container {
   display: inline-block;
   cursor: pointer;
@@ -219,6 +235,38 @@ li{
     }}
 @media(min-width:676px){
     display:inline;
+    }
+`;
+const InlineNav2 = styled.ul`
+width: 100%;
+    list-style: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 20px 10px;
+    margin-top:-25px;
+a{
+text-decoration:none;
+transition: transform .2s;
+padding:0 16px 0 0 ;
+color:#626262a3;
+&:hover{
+        color:black;
+}}
+`;
+
+const Li2 = styled.li`
+list-style:none;
+    text-decoration:none;
+    transition: transform .2s;
+    &:hover{
+        border-radius:5%;
+        transform: scale(1.1);
     }
 `;
 

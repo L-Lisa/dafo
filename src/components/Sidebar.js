@@ -6,37 +6,37 @@ import Shadi from "..//images/Shadi.jpg"
 import contactUs from "..//images/contactUs.jpg"
 
 export const Sidebar = () => {
-
     return (
         <ContactUs>
             <h2>For more information</h2>
             <h3>Contact our representative</h3>
             <Person src={JohanDafo} alt="Johan Larsson" />
             <div>
-                <ul>
+                <ContactList>
                     <li> <h3>Johan Larsson</h3></li>
                     <li>Dafo Middle East</li>
                     <li>General Manager</li>
                     <li>+971 55 143 60 88</li>
-                </ul>
+                </ContactList>
             </div>
             <Person src={Shadi} alt="Shadi Abdulla" />
             <div>
-                <ul>
+                <ContactList>
                     <li> <h3>Shadi Abdulla</h3></li>
                     <li>Dafo Middle East</li>
                     <li>Sales Manager</li>
                     <li>+971 55 800 55 09</li>
-                </ul>
+                </ContactList>
             </div>
-            <img src={contactUs} alt="Dafo Sales team" className="largerImg" />
+            <Person src={contactUs} alt="Dafo Sales team" className="largerImg" />
             <div>
                 <ul>
                     <li> <h3>Sales team</h3></li>
                     <li>Dafo Middle East</li>
                     <li><a href="mailto:sales@dafo-middle-east.com">sales@dafo-middle-east.com</a></li>
+                    <UNCE src={UnceImage} alt="UNCE type-approved" className="largerImg" />
                 </ul>
-                <UNCE src={UnceImage} alt="UNCE type-approved" className="largerImg" />
+
             </div>
         </ContactUs>
     )
@@ -63,10 +63,6 @@ h2{
         max-width:250px;
     }
 }   
-ul{
-    list-style:none;
-    display: inline;
-}
 li{
     padding: 10px 2px;
 }
@@ -80,20 +76,25 @@ a{
     text-decoration:none;
     color:#1c1c1c;
 }
-img{
-    max-width: 250px;
-}
 `;
 
 export const Person = styled.img`
- width:100px;
-    height: auto;
+width:100%;
+height: auto;
     @media (min-width:676px){
-        width:90%;
+        width:60%;
         max-width:250px;
     }
 `
 export const UNCE = styled.img`
 max-width: 200px;
 padding-top:20px;
-`
+`;
+
+const ContactList = styled.ul`
+padding-bottom: 13px;
+line-height: 7px;
+list-style:none;
+display: inline;
+padding-bottom:5px;
+`;
