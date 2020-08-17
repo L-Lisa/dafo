@@ -20,7 +20,7 @@ export const Downloads = () => {
             {/*   {!showInfo ? ( */}
             <Main>
                 <IntroDiv>
-                    <h1>Get instant access</h1> <p>leave your details here to join mailing list and get access to brows and download all folders</p>
+                    <h2>Get instant access</h2> <p>leave your details here to join mailing list and get access to brows and download all folders</p>
                 </IntroDiv>
                 <FormBox>
                     <div id="mc_embed_signup">
@@ -84,7 +84,7 @@ export const Downloads = () => {
                                         <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
                                             className="button"
                                         />
-                                        <div className="indicates-required"><span className="asterisk">*</span> indicates required</div>
+                                        {/*  <div className="indicates-required"><span className="asterisk">*</span> indicates required</div> */}
                                         {/*  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
                                         <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script> */}
                                     </div></div>
@@ -150,17 +150,36 @@ margin: 0 auto;
 border: 1px solid #1c1c1c0f;
 box-shadow: 2px 2px 10px 2px rgb(207 204 204 / 70%);
 @media only screen and (min-width : 400px) {
-  width:80%;
+  width:50%;
 }
 @media only screen and (min-width : 990px) {
-  width:80%;
+    width: 55%;
   max-width: 550px;
 }
 `;
 
 const IntroDiv = styled.div`
+margin: 0 auto;
+p{
+    width:90%;
+    max-width:250px;
+    margin: 0 auto;
+    margin-bottom:10px;
+}
+h2{
+    margin: 0 auto;
+    color: white;
+    font-weight:bold;
+    background:black;
+    width: max-content;
+    width: 90%;
+    text-align: center;
+    margin-block-start: 0;
+    @media (min-width:676px){
+        padding-bottom: 5px;
+        max-width:250px;
+}
 
-margin:0 auto;
 `;
 
 const Form = styled.form`
@@ -179,12 +198,11 @@ label{
 input{
     margin: 4px;
 }
-`;
+`
 const DownloadsBox = styled.section`
-
+width:auto;
 `;
 const FolderBox = styled.a`
-width: 50%;
 background-image: url(${foldericon});
 background-position: center;
 background-repeat: no-repeat;

@@ -10,7 +10,9 @@ export const Footer = () => {
             <Padding>
                 <Box1>
                     <img src={DafoBlack} alt="Dafo Middle East" />
-
+                    <SmeSupport>
+                        <img src={smeDxbTxt} alt="Dafo supporting sme enterprise" />
+                    </SmeSupport>
                 </Box1>
                 <Box2>
                     <h1>Follow Dafo</h1>
@@ -40,9 +42,7 @@ export const Footer = () => {
                     <Link to="/contact-us">Contact</Link><br />
                     <Link to="/site-map">Site-map</Link>
 
-                    <SmeSupport>
-                        <img src={smeDxbTxt} alt="Dafo supporting sme enterprise" />
-                    </SmeSupport>
+
                 </Box4>
             </Padding>
         </FooterContainer>
@@ -77,6 +77,7 @@ justify-content:center;
 `
 const Box1 = styled.div`
 width:100%;
+display:flex;
 @media only screen and (min-width : 480px) {
     width:40%;
     margin:2%;
@@ -86,8 +87,8 @@ width:100%;
     margin:2%;
 }
 img{
-    width:100%;
-    height:auto;
+    width:60%;
+    height:60%;
     }
 `;
 const Box2 = styled.div`
@@ -127,11 +128,11 @@ margin:5%;
 }
 `;
 const SmeSupport = styled.section`
-width: 40%;
+width: 35%;
 align-self: flex-start;
 display:flex;
-margin-left:-5px;
-margin-top:5px;
+margin-left:5px;
+margin-top:15px;
 flex-direction: column;
 align-items: center;
 img{
