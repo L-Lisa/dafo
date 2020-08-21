@@ -25,9 +25,7 @@ export const Downloads = () => {
                 <FormBox>
                     <div id="mc_embed_signup">
                         <Form
-                            action="https://gmail.us17.list-manage.com/subscribe/post-json?u=ddf4337f8aa288503ec5cf4fb&amp;id=2b430cfaa9&c=?"
-
-                            /*   action="https://dafo-middle-east.us4.list-manage.com/subscribe/post-json?u=4fc9766f7a3940cb4177774a4&amp;id=93f2cf16ba&c=?" */
+                            action="https://dafo-middle-east.us4.list-manage.com/subscribe/post-json?u=4fc9766f7a3940cb4177774a4&amp;id=93f2cf16ba&c=?"
                             method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate"
                             target="hiddenFrame" novalidate
                         >
@@ -178,8 +176,7 @@ h2{
     @media (min-width:676px){
         padding-bottom: 5px;
         max-width:250px;
-}
-
+}}
 `;
 
 const Form = styled.form`

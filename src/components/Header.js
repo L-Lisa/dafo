@@ -147,6 +147,7 @@ a{
     color:white;
     text-decoration:none;
     margin:6px;
+    align-self: center;
     transition: transform .2s;
     &:hover{
         color:gray;

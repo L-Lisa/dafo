@@ -9,7 +9,7 @@ export const Footer = () => {
         <FooterContainer>
             <Padding>
                 <Box1>
-                    <img src={DafoBlack} alt="Dafo Middle East" />
+                    <DafoBlackFoot src={DafoBlack} alt="Dafo Middle East" />
                     <SmeSupport>
                         <img src={smeDxbTxt} alt="Dafo supporting sme enterprise" />
                     </SmeSupport>
@@ -78,6 +78,7 @@ justify-content:center;
 const Box1 = styled.div`
 width:100%;
 display:flex;
+flex-direction:column;
 @media only screen and (min-width : 480px) {
     width:40%;
     margin:2%;
@@ -85,11 +86,23 @@ display:flex;
 @media only screen and (min-width : 678px) {
     width:24%;
     margin:2%;
-}
+}`
+const DafoBlackFoot = styled.img`
+    width: 165px;
+    height: 56px;
+`;
+const SmeSupport = styled.section`
+height: auto;
+margin-left:5px;
+margin-top:15px;
+flex-direction: column;
+align-items: center;
 img{
-    width:60%;
-    height:60%;
-    }
+    width:90px;
+    margin: 0 auto;
+    max-width: 250px;
+    border: 1px solid #1c1c1c0f;
+}
 `;
 const Box2 = styled.div`
 width:90%;
@@ -112,7 +125,6 @@ margin:5%;
 }
 @media only screen and (min-width : 678px) {
     width:20%;
-    
 }
 `;
 const Box4 = styled.div`
@@ -125,20 +137,5 @@ margin:5%;
 @media only screen and (min-width : 678px) {
     width:20%;
     margin:2%;
-}
-`;
-const SmeSupport = styled.section`
-width: 35%;
-align-self: flex-start;
-display:flex;
-margin-left:5px;
-margin-top:15px;
-flex-direction: column;
-align-items: center;
-img{
-    width:80%;
-    margin: 0 auto;
-    max-width: 250px;
-    border: 1px solid #1c1c1c0f;
 }
 `;
