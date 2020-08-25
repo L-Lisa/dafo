@@ -2,6 +2,7 @@ import React from "react"
 import styled from 'styled-components/macro'
 import contactUs from "..//images/contactUs.jpg"
 import DafoBlack from "..//images/DafoBlack.jpg"
+import dafoMEred from "..//images/dafoMEred.jpg"
 
 export const ContactUsPage = () => {
     return (
@@ -26,7 +27,7 @@ export const ContactUsPage = () => {
             <Box2>
                 <h2>Contact us</h2>
                 <Contacts>
-                    <img src={DafoBlack} alt="Dafo Middle East" />
+                    <img src={dafoMEred} alt="Dafo Middle East" />
                     <p>+971 4 232 3957</p>
                     <p><a href="mailto:infos@dafo-middle-east.com">info@dafo-middle-east.com</a></p>
                 </Contacts>

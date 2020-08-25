@@ -8,6 +8,7 @@ import contactUs from "..//images/contactUs.jpg"
 export const Sidebar = () => {
     return (
         <ContactUs>
+            <UNCE src={UnceImage} alt="UNCE type-approved" className="largerImg" />
             <h2>For more information</h2>
             <h3>Contact our representative</h3>
             <Person src={JohanDafo} alt="Johan Larsson" />
@@ -24,25 +25,29 @@ export const Sidebar = () => {
                 <ContactList>
                     <li> <h3>Shadi Abdulla</h3></li>
                     <li>Dafo Middle East</li>
-                    <li>Sales Manager</li>
+                    <li>Regional Manager</li>
                     <li>+971 55 800 55 09</li>
                 </ContactList>
             </div>
             <Person src={contactUs} alt="Dafo Sales team" className="largerImg" />
             <div>
-                <ul>
+                <ContactList>
                     <li> <h3>Sales team</h3></li>
                     <li>Dafo Middle East</li>
-                    <li><a href="mailto:sales@dafo-middle-east.com">sales@dafo-middle-east.com</a></li>
-                    <UNCE src={UnceImage} alt="UNCE type-approved" className="largerImg" />
-                </ul>
-
+                </ContactList>
             </div>
+            <MailLink href="mailto:sales@dafo-middle-east.com">Email: sales@dafo-middle-east.com</MailLink>
+
         </ContactUs>
     )
 }
 
+const MailLink = styled.a`
+line-height: normal;
+width:140px;
+padding-bottom:5px;
 
+`;
 const ContactUs = styled.article`
 box-sizing:border-box;
 width:100%;
@@ -56,6 +61,7 @@ h2{
     width: max-content;
     width: 90%;
     text-align: center;
+    padding-left: 4px;
     margin-block-start: 0;
     @media (min-width:676px){
         padding-bottom: 5px;
@@ -68,6 +74,7 @@ li{
 }
 h3{
     display: inline;
+    text-align: center;
 }
 div{
     padding-bottom: 10px;
@@ -88,7 +95,7 @@ height: auto;
 `
 export const UNCE = styled.img`
 max-width: 200px;
-padding-top:20px;
+margin: 20px;
 `;
 
 const ContactList = styled.ul`

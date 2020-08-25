@@ -2,7 +2,7 @@ import React from "react"
 import styled from 'styled-components/macro'
 import MainImgSml from "..//images/MainImgSml.jpg"
 import Buses from "..//images/ProductImg-Buses.jpg"
-
+import UnceImage from "..//images/UnceImage.png"
 import Mining from "..//images/ProductImg-Mining.jpg"
 import PowerGen from "..//images/ProductImg-powerGenerator.jpeg"
 import contactUs from "..//images/contactUs.jpg"
@@ -63,11 +63,12 @@ export const MainPage = () => {
                                 sourceType: 'profile',
                                 screenName: 'Dafovehicle',
                                 width: "100%",
-
                             }}
                             options={{
                                 height: '700',
                             }}
+
+
                         />
                     </TwitterBox>
 
@@ -125,6 +126,8 @@ margin: 0 auto;
     margin-left: 10px;
 }
 `;
+
+
 const ContactImg = styled.img`
     max-width: 250px;
 `

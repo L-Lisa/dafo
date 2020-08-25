@@ -10,9 +10,7 @@ export const Footer = () => {
             <Padding>
                 <Box1>
                     <DafoBlackFoot src={DafoBlack} alt="Dafo Middle East" />
-                    <SmeSupport>
-                        <img src={smeDxbTxt} alt="Dafo supporting sme enterprise" />
-                    </SmeSupport>
+
                 </Box1>
                 <Box2>
                     <h1>Follow Dafo</h1>
@@ -31,18 +29,19 @@ export const Footer = () => {
     Dubai, UAE <br />
                     </p>
                     <p>
-                        +971 4 new number<br />
+                        +971 4 232 3957<br />
                         <a href="mailto:info@dafo-middle-east.com">info@dafo-middle-east.com</a>
 
                     </p>
 
                 </Box3>
                 <Box4>
-                    <Link to="/"> <h1>Dafo-middle-east.com/</h1></Link>
+                    <SmeSupport>
+                        <img src={smeDxbTxt} alt="Dafo supporting sme enterprise" />
+                    </SmeSupport>
+                    {/*   <Link to="/"> <h1>Dafo-middle-east.com/</h1></Link>
                     <Link to="/contact-us">Contact</Link><br />
-                    <Link to="/site-map">Site-map</Link>
-
-
+                    <Link to="/site-map">Site-map</Link> */}
                 </Box4>
             </Padding>
         </FooterContainer>
@@ -94,8 +93,8 @@ const DafoBlackFoot = styled.img`
 const SmeSupport = styled.section`
 height: auto;
 margin-left:5px;
-margin-top:15px;
 flex-direction: column;
+display: flex;
 align-items: center;
 img{
     width:90px;

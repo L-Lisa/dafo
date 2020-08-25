@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom"
 import facebookicon from "..//images/facebookicon.png"
 import youtubeicon from "..//images/youtubeicon.png"
 import twittericon from "..//images/twittericon.png"
+import Linkedin from "..//images/Linkedin.png"
 
 export const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -13,8 +14,9 @@ export const Header = () => {
         < HeaderWrapper >
             <TopHeader>
                 <SocialMediaBox>
-                    < a href="https://www.youtube.com/user/dafobrand"><LogoIcon src={youtubeicon} alt="Dafo youtube link" /></a>
+
                     <a href="https://www.facebook.com/dafobrand"><LogoIcon src={facebookicon} alt="Dafo Facebook link" /></a>
+                    < a href="https://www.youtube.com/user/dafobrand"><LogoIcon src={Linkedin} alt="Dafo youtube link" /></a>
                     < a href="https://twitter.com/Dafovehicle"><LogoIcon src={twittericon} alt="Dafo twitter link" /></a>
                 </SocialMediaBox>
 
@@ -93,7 +95,7 @@ export const Header = () => {
                 </ul>
             </InlineNav>
             {showProducts &&
-                <InlineNav2>
+                <InlineNav2 id="close" >
                     <Li2>
                         <NavLink to="/bus">Buses</NavLink>
                     </Li2>
@@ -134,6 +136,8 @@ display:none;
 
 const SocialMediaBox = styled.span`
     width: 35%;
+    display: flex;
+    align-items: center;
 `
 const LogoIcon = styled.img`
 height:30px;
@@ -210,11 +214,12 @@ margin-right: 5px;
 
 }
 `;
+
 const InlineNav = styled.ul`
 display:none;
 background:white;
+box-sizing: border-box;
 ul{
-    width: 100%;
     list-style:none;
     display:flex;
     justify-content: center;
@@ -239,7 +244,7 @@ li{
     }
 `;
 const InlineNav2 = styled.ul`
-width: 100%;
+box-sizing: border-box;
     list-style: none;
     display: -webkit-box;
     display: -webkit-flex;

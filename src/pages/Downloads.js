@@ -142,6 +142,7 @@ flex-direction: column;
 `
 const FormBox = styled.section`
 width:100%;
+padding: 10px;
 display:flex;
 justify-content: center;
 margin: 0 auto;
