@@ -16,7 +16,7 @@ export const Header = () => {
                 <SocialMediaBox>
 
                     <a href="https://www.facebook.com/dafobrand"><LogoIcon src={facebookicon} alt="Dafo Facebook link" /></a>
-                    < a href="https://www.youtube.com/user/dafobrand"><LogoIcon src={Linkedin} alt="Dafo youtube link" /></a>
+                    < a href="https://www.linkedin.com/company/dafo-middle-east"><LogoIcon src={Linkedin} alt="Dafo youtube link" /></a>
                     < a href="https://twitter.com/Dafovehicle"><LogoIcon src={twittericon} alt="Dafo twitter link" /></a>
                 </SocialMediaBox>
 
@@ -53,7 +53,7 @@ export const Header = () => {
                             <NavLink to="#">Services</NavLink>
                         </li>
                         <li>
-                            <NavLink to="#">Archives</NavLink>
+                            <NavLink to="#">Certificates</NavLink>
                         </li>
                         <li>
                             <NavLink to="#">About Dafo</NavLink>
@@ -84,7 +84,7 @@ export const Header = () => {
                     </li>
 
                     <li>
-                        <NavLink to="#">Archives</NavLink>
+                        <NavLink to="#">Certificates</NavLink>
                     </li>
                     <li>
                         <NavLink to="#">About</NavLink>

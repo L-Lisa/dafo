@@ -9,7 +9,7 @@ import { SiteMap } from "../pages/SiteMap"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 import { Downloads } from "../pages/Downloads"
-
+import { Certificate } from "../pages/Certificate"
 
 export const Directions = () => {
     return (
@@ -44,7 +44,9 @@ export const Directions = () => {
 
                     <Route path="/downloads" exact>
                         <Downloads />
-
+                    </Route>
+                    <Route path="/certificate" exact>
+                        <Downloads />
                     </Route>
                 </Switch>
             </main>

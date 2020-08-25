@@ -19,6 +19,8 @@ export const Footer = () => {
                     < a href="https://www.youtube.com/user/dafobrand">Youtube</a>
                     <br />
                     < a href="https://twitter.com/Dafovehicle">Twitter</a>
+                    <br />
+                    < a href="https://www.linkedin.com/company/dafo-middle-east">LinkedIn</a>
                 </Box2>
                 <Box3>
                     <h1>Dafo Middle East</h1>
