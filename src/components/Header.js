@@ -72,7 +72,6 @@ export const Header = () => {
                         </li>
                     </ul>
                 }
-
             </Nav>
             <InlineNav>
                 <ul>
@@ -84,7 +83,7 @@ export const Header = () => {
                     </li>
 
                     <li>
-                        <NavLink to="#">Certificates</NavLink>
+                        <NavLink to="/certifications">Certificates</NavLink>
                     </li>
                     <li>
                         <NavLink to="#">About</NavLink>

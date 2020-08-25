@@ -19,7 +19,7 @@ export const Downloads = () => {
             {/*   {!showInfo ? ( */}
             <Main>
                 <IntroDiv>
-                    <h2>Downloads</h2> <p>Enter your details here to proceed to our download library and join our mailing list</p>
+                    <h2>Downloads</h2> <p>Enter your details here to proceed to our download library and join our mailing list.</p>
                 </IntroDiv>
                 <FormBox>
                     <div id="mc_embed_signup">
@@ -206,6 +206,7 @@ background-size: cover;
 text-decoration:none;
 color:#1c1c1c;
 `;
+
 const AccessButton = styled.button`
 width: 90%;
 `;
