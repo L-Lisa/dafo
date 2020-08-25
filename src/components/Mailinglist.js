@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/* import React, { Component } from 'react';
 import Mailchimp from 'react-mailchimp-form'
 import styled from 'styled-components';
 import dafoMEred from "..//images/dafoMEred.jpg"
@@ -10,11 +10,9 @@ export const Mailinglist = () => {
 
     return (
         <MailchimpBox>
-            {/*  <Logo>
-                <Link to="/"></Link>
-            </Logo> */}
+
             <Mailchimp
-                /* AddonClick */
+
                 action={process.env.REACT_APP_MAILCHIMP_URL}
                 fields={[
                     {
@@ -68,7 +66,7 @@ align-items: center;
 }
 input{
     height:1.1rem;
-    
+
     margin-bottom:5px;
 }
 label{
@@ -97,4 +95,4 @@ background-image:url(${dafoFlame});
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-`;
+`; */

@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 import { Mailinglist } from "../components/Mailinglist"
 import foldericon from "../images/foldericon.png"
 
-export const Downloads = () => {
+export const Certifications = () => {
     const [email, setEmail] = useState("");
     const [fName, setFName] = useState("");
     const [lName, setLName] = useState("");
@@ -19,7 +19,7 @@ export const Downloads = () => {
             {/*   {!showInfo ? ( */}
             <Main>
                 <IntroDiv>
-                    <h2>Downloads</h2> <p>Enter your details here to proceed to our download library and join our mailing list</p>
+                    <h2>Certificate</h2> <p>Enter your details here to proceed to our download library and join our mailing list</p>
                 </IntroDiv>
                 <FormBox>
                     <div id="mc_embed_signup">
@@ -94,9 +94,9 @@ export const Downloads = () => {
 
             {showInfo &&
                 <DownloadsBox>
-                    <FolderBox href=" https://dafomiddleeast.sharepoint.com/sites/download/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fdownload%2FShared%20Documents%2FDafo%20files&p=true&originalPath=aHR0cHM6Ly9kYWZvbWlkZGxlZWFzdC5zaGFyZXBvaW50LmNvbS86Zjovcy9kb3dubG9hZC9FazdGSm03ZE1EeEVnZURrc1ZwX21ud0JWdnotMmROWldOdE5xUVpzcVQzVElnP3J0aW1lPTdSbUh5enM4MkVn">
-                        <Thanks>Thank you, please follow this link to brows the downloadable files</Thanks>
-                        <AccessButton>Download Library</AccessButton>
+                    <FolderBox href="https://dafomiddleeast.sharepoint.com/sites/download/Shared%20Documents/Forms/AllItems.aspx?originalPath=aHR0cHM6Ly9kYWZvbWlkZGxlZWFzdC5zaGFyZXBvaW50LmNvbS86Zjovcy9kb3dubG9hZC9FazdGSm03ZE1EeEVnZURrc1ZwX21ud0JWdnotMmROWldOdE5xUVpzcVQzVElnP3J0aW1lPTJ3Vjczd1pKMkVn&viewid=893a2d4f%2D1a2b%2D41c8%2D909a%2Ddfc7245a2d53&id=%2Fsites%2Fdownload%2FShared%20Documents%2FDafo%20files%2FCertifications">
+                        <Thanks>Thank you, please follow this link to download the Certifications document</Thanks>
+                        <AccessButton>Certifications</AccessButton>
                     </FolderBox>
                 </DownloadsBox>
             }
@@ -206,6 +206,7 @@ background-size: cover;
 text-decoration:none;
 color:#1c1c1c;
 `;
+
 const AccessButton = styled.button`
 width: 90%;
 `;

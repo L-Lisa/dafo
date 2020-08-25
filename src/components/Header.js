@@ -53,7 +53,7 @@ export const Header = () => {
                             <NavLink to="#">Services</NavLink>
                         </li>
                         <li>
-                            <NavLink to="#">Certificates</NavLink>
+                            <NavLink to="/certifications">Certificates</NavLink>
                         </li>
                         <li>
                             <NavLink to="#">About Dafo</NavLink>
