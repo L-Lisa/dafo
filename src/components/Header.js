@@ -182,6 +182,8 @@ background:white;
 ul{
     list-style:none;
     text-decoration:none;
+    width: auto;
+    margin-left: 50%;
 }
 li{
     
@@ -194,7 +196,7 @@ a{
 const Hamburger = styled.div`
 margin-right: 5px;
 @media(min-width:319px){
-    margin-right:8px;
+    margin-right:18px;
 }
 .container {
   display: inline-block;
