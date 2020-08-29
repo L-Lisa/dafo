@@ -13,29 +13,32 @@ export const Footer = () => {
 
                 </Box1>
                 <Box2>
-                    <h1>Follow Dafo</h1>
-                    <a href="https://www.facebook.com/dafobrand">Facebook</a>
-                    <br />
-                    < a href="https://www.youtube.com/user/dafobrand">Youtube</a>
-                    <br />
-                    < a href="https://twitter.com/Dafovehicle">Twitter</a>
-                    <br />
-                    < a href="https://www.linkedin.com/company/dafo-middle-east">LinkedIn</a>
+                    <div>
+                        <h1>Follow Dafo</h1>
+                        <a href="https://www.facebook.com/dafobrand">Facebook</a>
+                        <br />
+                        < a href="https://www.youtube.com/user/dafobrand">Youtube</a>
+                        <br />
+                        < a href="https://twitter.com/Dafovehicle">Twitter</a>
+                        <br />
+                        < a href="https://www.linkedin.com/company/dafo-middle-east">LinkedIn</a>
+                    </div>
                 </Box2>
                 <Box3>
-                    <h1>Dafo Middle East</h1>
-                    <p>
-                        Clover bay tower<br />
+                    <div>
+                        <h1>Dafo Middle East</h1>
+                        <p>
+                            Clover bay tower<br />
     Office 1106 <br />
     Business bay <br />
     Dubai, UAE <br />
-                    </p>
-                    <p>
-                        +971 4 232 3957<br />
-                        <a href="mailto:info@dafo-middle-east.com">info@dafo-middle-east.com</a>
+                        </p>
+                        <p>
+                            +971 4 232 3957<br />
+                            <a href="mailto:info@dafo-middle-east.com">info@dafo-middle-east.com</a>
 
-                    </p>
-
+                        </p>
+                    </div>
                 </Box3>
                 <Box4>
                     <SmeSupport>
@@ -58,7 +61,7 @@ background:black;
 font-size:0.8rem;
 h1{
     font-size:1.2rem;
-    margin-top: 0;
+    margin: 0;
 }
 a{
     text-decoration:none;
@@ -80,13 +83,19 @@ const Box1 = styled.div`
 width:100%;
 display:flex;
 flex-direction:column;
+align-items: center;
 @media only screen and (min-width : 480px) {
     width:40%;
     margin:2%;
+    display: flex;
+    align-items: flex-end;
 }
 @media only screen and (min-width : 678px) {
     width:24%;
     margin:2%;
+}
+@media only screen and (min-width : 2000px) {
+    width:15%;
 }`
 const DafoBlackFoot = styled.img`
     width: 165px;
@@ -98,6 +107,9 @@ margin-left:5px;
 flex-direction: column;
 display: flex;
 align-items: center;
+@media only screen and (min-width : 480px) {
+    margin-left:1px;
+}
 img{
     width:90px;
     margin: 0 auto;
@@ -108,24 +120,57 @@ img{
 const Box2 = styled.div`
 width:90%;
 margin:5%;
+text-align:center;
 @media only screen and (min-width : 480px) {
     width:40%;
     margin:2%;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    div{
+    margin-left:15px;
+}
 }
 @media only screen and (min-width : 678px) {
     width:20%;
     margin:2% 1%;
 }
+@media only screen and (min-width : 850px) {
+    display: flex;
+    justify-content: center;
+}
+@media only screen and (min-width : 2000px) {
+    width:15%;
+}
 `;
 const Box3 = styled.div`
-width:90%;
+text-align:center;
 margin:5%;
+div{
+    width:auto;
+    display:flex;
+    flex-direction:column;
+}
+p{
+        margin:0;
+    }
 @media only screen and (min-width : 480px) {
     width:40%;
     margin:2%;
+    display: flex;
+    justify-content: flex-end;
+    div{
+        text-align: left;
+    }
 }
 @media only screen and (min-width : 678px) {
     width:20%;
+}
+@media only screen and (min-width : 850px) {
+    justify-content: center;
+}
+@media only screen and (min-width : 2000px) {
+    width:15%;
 }
 `;
 const Box4 = styled.div`
@@ -134,9 +179,15 @@ margin:5%;
 @media only screen and (min-width : 480px) {
     width:40%;
     margin:2%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 @media only screen and (min-width : 678px) {
     width:20%;
     margin:2%;
+}
+@media only screen and (min-width : 2000px) {
+    width:15%;
 }
 `;

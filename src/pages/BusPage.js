@@ -12,7 +12,7 @@ export const BusPage = () => {
                     <img src={BusPageMainImage} alt="Dafo Buses" />
                     <MainText>
                         <h1>Buses</h1>
-                        <p>Dafo is a market leader in extinguishing systems for vehicles and our Fire Suppression Systems for buses are approved according to the new regulation UNECE R107. Engines, hydraulics, fuel and electrical installations pose the greatest fire risks on buses. These fires often take hold very quickly and leave little time for evacuating the bus. Our systems are thoroughly EMC, vibration and temperature tested according to vehicle standards to ensure it will perform in any situation. Many of the world’s leading bus manufacturers install Dafo systems in their assembly line. Our engineers understand the importance of modern lean production and find solutions that integrates our system in your manufacturing process. A low total cost of ownership is an important key factor for every bus operator. Dafo Fire Suppression Systems, with its superior maintenance intervals and reliability, contributes to increased profitability for manufacturers and operators. In the video below, you can see the effectiveness of an UNECE R107 approved Dafo Forrex Fire Suppression System.
+                        <p>Dafo is a market leader in extinguishing systems for vehicles and our Fire Suppression Systems for buses are approved according to the new regulation UNECE R107. Engines, hydraulics, fuel and electrical installations pose the greatest fire risks on buses. These fires often take hold very quickly and leave little time for evacuating the bus. Our systems are thoroughly EMC, vibration and temperature tested according to vehicle standards to ensure it will perform in any situation. <br />Many of the world’s leading bus manufacturers install Dafo systems in their assembly line. Our engineers understand the importance of modern lean production and find solutions that integrates our system in your manufacturing process. A low total cost of ownership is an important key factor for every bus operator. Dafo Fire Suppression Systems, with its superior maintenance intervals and reliability, contributes to increased profitability for manufacturers and operators. In the video below, you can see the effectiveness of an UNECE R107 approved Dafo Forrex Fire Suppression System.
                         </p>
                         <a href="https://www.youtube.com/watch?v=yFrJz5tydMQ&t=50s"><Button>Live demo link..</Button> </a>
 
@@ -20,7 +20,6 @@ export const BusPage = () => {
                 </Intro>
                 <PlayerContainer>
                     <EmbedPlayer>
-                        <p>ska det vara länk som ovan eller inbäddad? Tänker att man kan visa den såhär i en större skärm iaf (som jag gjort nu, den är inte med på en tel)</p>
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=yFrJz5tydMQ&t=50s" width='auto'
                             height='100%'
@@ -65,7 +64,6 @@ margin: 0 auto;
 `;
 const FlexDiv2 = styled.section`
 margin: 0 auto;
-min-width: 300px;
 @media(min-width:676px){
     min-width:unset;
     width:30%;
@@ -118,9 +116,10 @@ height: 400px;
 }
 `;
 const PlayerContainer = styled.div`
-width:90%;
+width: max-content;
 height:auto;
 margin: 0 auto;
+margin-top: 40px;
 `;
 
 

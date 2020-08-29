@@ -56,10 +56,8 @@ margin: 0 auto;
     width:65%;
 }
 `;
-const FlexDiv2 = styled.section`      width: 20%;
-margin-left: -10px;
+const FlexDiv2 = styled.section`  
 margin: 0 auto;
-min-width: 300px;
 @media(min-width:676px){
     min-width:unset;
     width:30%;

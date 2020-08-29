@@ -13,7 +13,7 @@ export const PowerGenPage = () => {
                         <h1>Special applications</h1>
                         <p>Many business operations rely on emergency generators to secure critical functions within their organization. 	Same content as bus page
                         It is easy to ignore the fact that, as these units are driven by combustible engines,
-                        they also constitute a significant fire hazard. Dafo Forrex Fire Suppression Systems response
+                        they also constitute a significant fire hazard. <br />Dafo Forrex Fire Suppression Systems response
                         rapidly to any increase in temperature. The Dafo system is developed to use worldwide in both cold and hot climate.
                         It ensures maximum protection while being much more economical than previously available
 solutions like water sprinkler, dry chemical or CO2-systems</p>
@@ -53,7 +53,6 @@ margin: 0 auto;
 `;
 const FlexDiv2 = styled.section`
 margin: 0 auto;
-min-width: 300px;
 @media(min-width:676px){
     min-width:unset;
     width:30%;

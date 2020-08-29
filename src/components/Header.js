@@ -14,7 +14,6 @@ export const Header = () => {
         < HeaderWrapper >
             <TopHeader>
                 <SocialMediaBox>
-
                     <a href="https://www.facebook.com/dafobrand"><LogoIcon src={facebookicon} alt="Dafo Facebook link" /></a>
                     < a href="https://www.linkedin.com/company/dafo-middle-east"><LogoIcon src={Linkedin} alt="Dafo youtube link" /></a>
                     < a href="https://twitter.com/Dafovehicle"><LogoIcon src={twittericon} alt="Dafo twitter link" /></a>
@@ -47,7 +46,13 @@ export const Header = () => {
                 {showMenu &&
                     <ul>
                         <li>
-                            <NavLink to="#" >Products</NavLink>
+                            <NavLink to="/bus">Buses</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/powergenerators">Power generators </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/mining-constructon">Mining & Construction</NavLink>
                         </li>
                         <li>
                             <NavLink to="#">Services</NavLink>
@@ -59,13 +64,13 @@ export const Header = () => {
                             <NavLink to="#">About Dafo</NavLink>
                         </li>
                         <li>
-                            <NavLink to="#">News</NavLink>
-                        </li>
-                        <li>
                             <NavLink to="/downloads">Downloads</NavLink>
                         </li>
                         <li>
                             <NavLink to="/contact-us">Contact</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/site-map">Site Map</NavLink>
                         </li>
                         <li>
                             <NavLink to="/">Home</NavLink>
@@ -184,6 +189,8 @@ ul{
     text-decoration:none;
     width: auto;
     margin-left: 50%;
+    background: #fff;
+
 }
 li{
     

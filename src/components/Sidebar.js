@@ -10,7 +10,7 @@ export const Sidebar = () => {
         <ContactUs>
             <UNCE src={UnceImage} alt="UNCE type-approved" className="largerImg" />
             <h2>For more information</h2>
-            <h3>Contact our representative</h3>
+            <h3>Contact our representatives</h3>
             <Person src={JohanDafo} alt="Johan Larsson" />
             <div>
                 <ContactList>
@@ -36,7 +36,7 @@ export const Sidebar = () => {
                     <li>Dafo Middle East</li>
                 </ContactList>
             </div>
-            <MailLink href="mailto:sales@dafo-middle-east.com">Email: sales@dafo-middle-east.com</MailLink>
+            <MailLink href="mailto:sales@dafo-middle-east.com">Email: <br />sales@dafo-middle-east.com</MailLink>
 
         </ContactUs>
     )
@@ -44,7 +44,7 @@ export const Sidebar = () => {
 
 const MailLink = styled.a`
 line-height: normal;
-width:140px;
+width: 130px;
 padding-bottom:5px;
 
 `;
@@ -54,6 +54,7 @@ width:100%;
 display:flex;
 flex-direction: column;
 align-items: center;
+margin-bottom: 30px;
 h2{
     color: white;
     font-weight:bold;
@@ -70,7 +71,7 @@ h2{
     }
 }   
 li{
-    padding: 10px 2px;
+    padding: 7px 2px;
 }
 h3{
     display: inline;
@@ -85,17 +86,22 @@ a{
 }
 `;
 
-export const Person = styled.img`
-width:100%;
+export const Person = styled.img`    
+width:35%;
 height: auto;
     @media (min-width:676px){
-        width:60%;
+        width:57%;
         max-width:250px;
     }
-`
+    @media (min-width:1200px){
+        width:50%;
+        max-width:250px;
+    }
+`;
 export const UNCE = styled.img`
-max-width: 200px;
-margin: 20px;
+width: 90%;
+max-width: 300px;
+margin: 0 20px 10px;
 `;
 
 const ContactList = styled.ul`
