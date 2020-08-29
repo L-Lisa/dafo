@@ -95,7 +95,7 @@ export const Certifications = () => {
             ) : (
                     <DownloadsBox>
                         <FolderBox href="https://dafomiddleeast.sharepoint.com/sites/download/Shared%20Documents/Forms/AllItems.aspx?originalPath=aHR0cHM6Ly9kYWZvbWlkZGxlZWFzdC5zaGFyZXBvaW50LmNvbS86Zjovcy9kb3dubG9hZC9FazdGSm03ZE1EeEVnZURrc1ZwX21ud0JWdnotMmROWldOdE5xUVpzcVQzVElnP3J0aW1lPTJ3Vjczd1pKMkVn&viewid=893a2d4f%2D1a2b%2D41c8%2D909a%2Ddfc7245a2d53&id=%2Fsites%2Fdownload%2FShared%20Documents%2FDafo%20files%2FCertifications">
-                            <Thanks>Thank you, please follow this link to download the Certifications document<AccessButton><img src={foldericon} alt="Dafo downloads" />Certificates</AccessButton></Thanks>
+                            <Thanks>Welcome, please follow this link to download the Certifications document<AccessButton><img src={foldericon} alt="Dafo downloads" />Certificates</AccessButton></Thanks>
 
                         </FolderBox>
                     </DownloadsBox>

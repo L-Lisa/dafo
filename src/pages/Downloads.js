@@ -95,7 +95,7 @@ export const Downloads = () => {
             ) : (
                     <DownloadsBox>
                         <FolderBox href=" https://dafomiddleeast.sharepoint.com/sites/download/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fdownload%2FShared%20Documents%2FDafo%20files&p=true&originalPath=aHR0cHM6Ly9kYWZvbWlkZGxlZWFzdC5zaGFyZXBvaW50LmNvbS86Zjovcy9kb3dubG9hZC9FazdGSm03ZE1EeEVnZURrc1ZwX21ud0JWdnotMmROWldOdE5xUVpzcVQzVElnP3J0aW1lPTdSbUh5enM4MkVn">
-                            <Thanks>Thank you, please follow this link to brows the downloadable files
+                            <Thanks>Welcome, please follow this link to brows the downloadable files
                             <AccessButton><img src={foldericon} alt="Dafo downloads" />Download Library</AccessButton>
                             </Thanks>
 
