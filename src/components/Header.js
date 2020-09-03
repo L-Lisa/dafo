@@ -6,6 +6,7 @@ import facebookicon from "..//images/facebookicon.png"
 import youtubeicon from "..//images/youtubeicon.png"
 import twittericon from "..//images/twittericon.png"
 import Linkedin from "..//images/Linkedin.png"
+import Vehicle from "..//images/Vehicle.jpg"
 
 export const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -17,6 +18,7 @@ export const Header = () => {
                     <a href="https://www.facebook.com/dafobrand"><LogoIcon src={facebookicon} alt="Dafo Facebook link" /></a>
                     < a href="https://www.linkedin.com/company/dafo-middle-east"><LogoIcon src={Linkedin} alt="Dafo youtube link" /></a>
                     < a href="https://twitter.com/Dafovehicle"><LogoIcon src={twittericon} alt="Dafo twitter link" /></a>
+                    <VehicleImg src={Vehicle} alt="Dafo Middle East" />
                 </SocialMediaBox>
 
                 <MiniNav>
@@ -283,3 +285,7 @@ list-style:none;
     }
 `;
 
+const VehicleImg = styled.img`
+height: 55px;
+margin-left: 5px;
+`
