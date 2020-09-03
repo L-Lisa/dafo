@@ -51,7 +51,7 @@ export const MainPage = () => {
                             <li>Telephone:<h3><br />+971 4 232 3957</h3></li>
 
                             <li>E-mail:<br /> <h3>info@dafo-middle-east.com</h3></li>
-                            <li><h3>Opening hours:</h3><p className="block"> Sun-Thu: 9.00am – 6.00pm</p>
+                            <li>Opening hours:<p className="block"> <h3>Sun-Thu: 9.00am – 6.00pm</h3></p>
                             </li>
                         </ul>
                     </div>
