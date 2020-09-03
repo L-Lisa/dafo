@@ -46,34 +46,34 @@ export const Header = () => {
                 {showMenu &&
                     <ul>
                         <li>
-                            <NavLink to="/bus">Buses</NavLink>
+                            <NavLink to="/bus" onClick={() => setShowMenu(false)}>Buses</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/powergenerators">Power generators </NavLink>
+                            <NavLink to="/powergenerators" onClick={() => setShowMenu(false)}>Power generators </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/mining-constructon">Mining & Construction</NavLink>
+                            <NavLink to="/mining-constructon" onClick={() => setShowMenu(false)}>Mining & Construction</NavLink>
                         </li>
                         <li>
-                            <NavLink to="#">Services</NavLink>
+                            <NavLink to="#" onClick={() => setShowMenu(false)}>Services</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/certifications">Certificates</NavLink>
+                            <NavLink to="/certifications" onClick={() => setShowMenu(false)}>Certificates</NavLink>
                         </li>
                         <li>
-                            <NavLink to="#">About Dafo</NavLink>
+                            <NavLink to="#" onClick={() => setShowMenu(false)}>About Dafo</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/downloads">Downloads</NavLink>
+                            <NavLink to="/downloads" onClick={() => setShowMenu(false)}>Downloads</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/contact-us">Contact</NavLink>
+                            <NavLink to="/contact-us" onClick={() => setShowMenu(false)}>Contact</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/site-map">Site Map</NavLink>
+                            <NavLink to="/site-map" onClick={() => setShowMenu(false)}>Site Map</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink to="/" onClick={() => setShowMenu(false)}>Home</NavLink>
                         </li>
                     </ul>
                 }
@@ -101,13 +101,13 @@ export const Header = () => {
             {showProducts &&
                 <InlineNav2 id="close" >
                     <Li2>
-                        <NavLink to="/bus">Buses</NavLink>
+                        <NavLink to="/bus" onClick={() => setShowProducts(false)}>Buses</NavLink>
                     </Li2>
                     <Li2>
-                        <NavLink to="/powergenerators">Powergenerators</NavLink>
+                        <NavLink to="/powergenerators" onClick={() => setShowProducts(false)}>Powergenerators</NavLink>
                     </Li2>
                     <Li2>
-                        <NavLink to="/mining-constructon">Mining & Construction</NavLink>
+                        <NavLink to="/mining-constructon" onClick={() => setShowProducts(false)} >Mining & Construction</NavLink>
                     </Li2>
                 </InlineNav2>
             }
@@ -161,7 +161,6 @@ a{
         color:gray;
         transform: scale(1.1);
     }}
-
 `;
 const LogoHeader = styled.div`
 img{

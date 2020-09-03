@@ -181,7 +181,7 @@ margin:5%;
     margin:2%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 @media only screen and (min-width : 678px) {
     width:20%;
