@@ -6,15 +6,17 @@ import UnceImage from "..//images/UnceImage.png"
 import Mining from "..//images/ProductImg-Mining.jpg"
 import PowerGen from "..//images/ProductImg-powerGenerator.jpeg"
 import contactUs from "..//images/contactUs.jpg"
+import DafoDubaiME from "..//images/DafoDubaiM-E.jpg"
 import { Link } from "react-router-dom"
 import { Timeline } from 'react-twitter-widgets'
+
 
 export const MainPage = () => {
     return (
         <Wrapper>
             <FlexDiv1>
                 <Intro>
-                    <img src={MainImgSml} alt="Dafo" />
+                    <img src={DafoDubaiME} alt="Dafo" />
                     <MainText>
                         <h1>Fire & rescue systems for your safety</h1>
                         <p>Since its beginnings back in 1919, Dafo Brand has developed into a modern, high-tech company. As the biggest Nordic supplier of fire suppression systems and fire safety equipment we can always provide you with the best solution. Our fire suppression systems are used worldwide and are installed on the assembly line by many of the world’s leading manufacturers. Our goal is to make sure all our customers are safe and secure.</p>
@@ -291,12 +293,6 @@ overflow: scroll;
    height:290px;
 }
 @media (min-width: 1200px){
-   height:360px;
-}
-@media (min-width: 1400px){
-   height:390px;
-}
-@media (min-width: 1600px){
-   height:480px;
+    height: auto;
 }
 `; 
