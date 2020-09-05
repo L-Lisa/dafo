@@ -7,6 +7,7 @@ import youtubeicon from "..//images/youtubeicon.png"
 import twittericon from "..//images/twittericon.png"
 import Linkedin from "..//images/Linkedin.png"
 import Vehicle from "..//images/Vehicle.jpg"
+import redNblack from "..//images/redNblackLogo.png"
 
 export const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
