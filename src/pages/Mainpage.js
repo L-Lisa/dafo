@@ -9,6 +9,9 @@ import contactUs from "..//images/contactUs.jpg"
 import DafoDubaiME from "..//images/DafoDubaiM-E.jpg"
 import DafoDubaiLrgLogo from "images/DafoDubaiLrgLogo.png"
 import DafoDubaiFull from "images/DafoDubaiLrgFullColr.jpg"
+
+/* HERE IS THE VIDEO */
+import DafoDubaiVideo from "images/dafomainAnimComp.mp4"
 import { Link } from "react-router-dom"
 import { Timeline } from 'react-twitter-widgets'
 
@@ -19,9 +22,10 @@ export const MainPage = () => {
         <Wrapper>
             <FlexDiv1>
                 <Intro>
-                    {/*  <video controls autoPlay>
-                        <source src=" {DafoVid}"></source>
-                    </video> */}
+                    {/*  HERE IS THE VIDEO !!! */}
+                    <video controls autoPlay>
+                        <source src=" {DafoDubaiVideo}"></source>
+                    </video>
                     <img src={DafoDubaiFull} alt="Dafo" />
                     <MainText>
                         <h1>Fire & rescue systems for your safety</h1>
