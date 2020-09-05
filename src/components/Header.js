@@ -8,6 +8,7 @@ import twittericon from "..//images/twittericon.png"
 import Linkedin from "..//images/Linkedin.png"
 import Vehicle from "..//images/Vehicle.jpg"
 import redNblack from "..//images/redNblackLogo.png"
+import DafoRedNoBackground from "..//images/DafoMEnobackground.png"
 
 export const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -33,7 +34,7 @@ export const Header = () => {
             <Nav>
                 <BurgerBox>
                     <LogoHeader>
-                        <Link to="/"><img src={dafoMEred} alt="Dafo Middle East" /></Link>
+                        <Link to="/"><img src={DafoRedNoBackground} alt="Dafo Middle East" /></Link>
                     </LogoHeader>
 
                     <Hamburger>
