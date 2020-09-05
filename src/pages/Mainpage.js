@@ -8,8 +8,7 @@ import PowerGen from "..//images/ProductImg-powerGenerator.jpeg"
 import contactUs from "..//images/contactUs.jpg"
 import DafoDubaiME from "..//images/DafoDubaiM-E.jpg"
 import DafoDubaiLrgLogo from "images/DafoDubaiLrgLogo.png"
-import DafoMain from "..//images/smlDubaiMainVid.mp4"
-
+import DafoDubaiFull from "images/DafoDubaiLrgFullColr.jpg"
 import { Link } from "react-router-dom"
 import { Timeline } from 'react-twitter-widgets'
 
@@ -20,10 +19,10 @@ export const MainPage = () => {
         <Wrapper>
             <FlexDiv1>
                 <Intro>
-                    <video controls autoPlay>
-                        <source src=" {DafoMain}"></source>
-                    </video>
-                    <img src={DafoDubaiME} alt="Dafo" />
+                    {/*  <video controls autoPlay>
+                        <source src=" {DafoVid}"></source>
+                    </video> */}
+                    <img src={DafoDubaiFull} alt="Dafo" />
                     <MainText>
                         <h1>Fire & rescue systems for your safety</h1>
                         <p>Since its beginnings back in 1919, Dafo Brand has developed into a modern, high-tech company. As the biggest Nordic supplier of fire suppression systems and fire safety equipment we can always provide you with the best solution. Our fire suppression systems are used worldwide and are installed on the assembly line by many of the world’s leading manufacturers. Our goal is to make sure all our customers are safe and secure.</p>
@@ -282,22 +281,23 @@ p{
 const TwitterBox = styled.div`
 height: 400px;
 overflow: scroll;
+height: auto;
 @media (min-width: 676px){
-   height:160px;
+   height:190px;
 }
 @media (min-width: 800px){
-   height:200px;
+    height: 350px;
 }
 @media (min-width: 900px){
-   height:230px;
+    height: 380px;
 }
 @media (min-width: 1000px){
-   height:270px;
+    height: 410px;
 }
 @media (min-width: 1100px){
-   height:290px;
+    height: 480px;
 }
 @media (min-width: 1200px){
-    height: auto;
+    height: 520px;
 }
 `; 

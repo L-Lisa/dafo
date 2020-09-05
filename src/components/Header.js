@@ -8,7 +8,7 @@ import twittericon from "..//images/twittericon.png"
 import Linkedin from "..//images/Linkedin.png"
 import Vehicle from "..//images/Vehicle.jpg"
 import redNblack from "..//images/redNblackLogo.png"
-import DafoRedNoBackground from "..//images/DafoMEnobackground.png"
+import DafoRedNoBackground from "..//images/DafoVehicleLogoNoBackground.png"
 
 export const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -20,7 +20,7 @@ export const Header = () => {
                     <a href="https://www.facebook.com/dafobrand"><LogoIcon src={facebookicon} alt="Dafo Facebook link" /></a>
                     < a href="https://www.linkedin.com/company/dafo-middle-east"><LogoIcon src={Linkedin} alt="Dafo youtube link" /></a>
                     < a href="https://twitter.com/Dafovehicle"><LogoIcon src={twittericon} alt="Dafo twitter link" /></a>
-                    <VehicleImg src={Vehicle} alt="Dafo Middle East" />
+                    <VehicleImg src={DafoRedNoBackground} alt="Dafo Middle East" />
                 </SocialMediaBox>
 
                 <MiniNav>
@@ -179,6 +179,7 @@ const BurgerBox = styled.section`
 display:flex;
 flex-direction:column;
 align-items: center;
+background:#1c1c1c;
 justify-content:space-between;
 @media(min-width:319px){
     flex-direction:row;
