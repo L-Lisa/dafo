@@ -320,6 +320,7 @@ const TwitterBox = styled.div`
   height: 400px;
   overflow: scroll;
   height: auto;
+  /* 
   @media (min-width: 676px) {
     height: 190px;
   }
@@ -337,7 +338,7 @@ const TwitterBox = styled.div`
   }
   @media (min-width: 1200px) {
     height: 520px;
-  }
+  } */
 `;
 const EmbedPlayer = styled.div`
 display:none;
