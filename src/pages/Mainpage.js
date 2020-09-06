@@ -11,6 +11,8 @@ import DafoDubaiLrgLogo from "images/DafoDubaiLrgLogo.png";
 import DafoDubaiFull from "images/DafoDubaiLrgFullColr.jpg";
 import { Link } from "react-router-dom";
 import { Timeline } from "react-twitter-widgets";
+import ReactPlayer from 'react-player/youtube'
+
 // import style from "../index.css" ;
 export const MainPage = () => {
   const [twitterLoaded, settwitterLoaded] = useState(false);
@@ -29,9 +31,16 @@ export const MainPage = () => {
     <Wrapper>
       <FlexDiv1>
         <Intro>
-          {/*  <video controls autoPlay>
-                        <source src=" {DafoVid}"></source>
-                    </video> */}
+
+          <PlayerContainer>
+            {/*  <EmbedPlayer>
+              <ReactPlayer
+                url="https://res.cloudinary.com/dnjk2bwkp/video/upload/v1599401569/dafomainAnimComp_i9irc2.mp4" width='auto'
+                height='100%'
+              />
+            </EmbedPlayer> */}
+          </PlayerContainer>
+
           <img src={DafoDubaiFull} alt="Dafo" />
           <MainText>
             <h1>Fire & rescue systems for your safety</h1>
@@ -46,7 +55,6 @@ export const MainPage = () => {
             </p>
           </MainText>
         </Intro>
-
         <ProductsDiv>
           <Link to="/powergenerators">
             <PowerGeneratorImg className="product-block ">
@@ -179,6 +187,7 @@ const Intro = styled.div`
     font-weight: bold;
   }
   img {
+    width: inherit;
     max-width: 100%;
     height: auto;
   }
@@ -329,4 +338,18 @@ const TwitterBox = styled.div`
   @media (min-width: 1200px) {
     height: 520px;
   }
+`;
+const EmbedPlayer = styled.div`
+display:none;
+@media(min-width:676px){
+display:inline-block;
+margin:0 auto;
+height: 400px;
+}
+`;
+const PlayerContainer = styled.div`
+width: max-content;
+height:auto;
+margin: 0 auto;
+margin-top: 40px;
 `;
