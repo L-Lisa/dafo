@@ -16,12 +16,19 @@ export const MainPage = () => {
   const [twitterLoaded, settwitterLoaded] = useState(false);
   useEffect(() => {
     if (twitterLoaded) {
-      var iframe = document.getElementById("twitter-widget-0");
-      var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-      var cssStyle = document.createElement("style");
-      cssStyle.innerText =
+      const scrollingCss =
         " div.timeline-Viewport {overflow: hidden;} div.timeline-Viewport ol {position:relative; top:0;animation: scroll 120s linear 0.5s infinite;} @keyframes scroll {95% { top: -1000%; } 100%{top:0;}}";
-      innerDoc.head.appendChild(cssStyle);
+
+      const iframes = document.querySelectorAll("[id^=twitter-widget]"); // Selecting all twitter widget iframes
+      for (let index = 0; index < iframes.length; index++) {
+        // Looping through the twitter widgets one by one to apply the style which allows auto scroll
+        const iframe = iframes[index];
+        const innerDoc =
+          iframe.contentDocument || iframe.contentWindow.document;
+        const styleElement = document.createElement("style");
+        styleElement.innerText = scrollingCss;
+        innerDoc.head.appendChild(styleElement);
+      }
     }
   }, [twitterLoaded]);
 
