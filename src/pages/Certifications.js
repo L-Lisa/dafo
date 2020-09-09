@@ -155,7 +155,8 @@ box-shadow: 2px 2px 10px 2px rgb(207 204 204 / 70%);
 `;
 
 const IntroDiv = styled.div`
-
+align-self: baseline;
+padding: 16px;
 p{
     width:90%;
     max-width:250px;
@@ -190,7 +191,7 @@ label{
     margin-top: 15px;
 }
 input{
-    margin: 4px;
+    margin: 16px;
 }
 `
 const DownloadsBox = styled.section`

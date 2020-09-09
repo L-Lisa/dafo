@@ -21,9 +21,8 @@ export const MainPage = () => {
       const scrollingCss =
         " div.timeline-Viewport {overflow: hidden;} div.timeline-Viewport ol {position:relative; top:0;animation: scroll 120s linear 0.5s infinite;} @keyframes scroll {95% { top: -1000%; } 100%{top:0;}}";
 
-      const iframes = document.querySelectorAll("[id^=twitter-widget]"); // Selecting all twitter widget iframes
+      const iframes = document.querySelectorAll("[id^=twitter-widget]");
       for (let index = 0; index < iframes.length; index++) {
-        // Looping through the twitter widgets one by one to apply the style which allows auto scroll
         const iframe = iframes[index];
         const innerDoc =
           iframe.contentDocument || iframe.contentWindow.document;
@@ -39,6 +38,20 @@ export const MainPage = () => {
       <FlexDiv1>
         <Intro>
 
+          <DubaiVideo
+            display="inline"
+            height="400"
+            autoPlay
+            loop
+            muted
+            preload="auto"
+            poster="poster.png">
+            <source src="https://res.cloudinary.com/dnjk2bwkp/video/upload/v1599663150/dafo/DafoDubaiMe9_pobkul.mp4" type="video/mp4" />
+            <img src="https://res.cloudinary.com/dnjk2bwkp/image/upload/v1599474586/dafo/DafoDubaiLrgFullColr_epa5j9.jpg" type="jpg" alt="Dafo Middle East" />
+            <p>Image loading..</p>
+          </DubaiVideo>
+
+          {/*  <img src="https://res.cloudinary.com/dnjk2bwkp/image/upload/v1599474586/dafo/DafoDubaiLrgFullColr_epa5j9.jpg" type="jpg" alt="Dafo Middle East" /> */}
           <PlayerContainer>
             {/*  <EmbedPlayer>
               <ReactPlayer
@@ -48,7 +61,7 @@ export const MainPage = () => {
             </EmbedPlayer> */}
           </PlayerContainer>
 
-          <img src={DafoDubaiFull} alt="Dafo" />
+          {/* <img src={DafoDubaiFull} alt="Dafo" /> */}
           <MainText>
             <h1>Fire & rescue systems for your safety</h1>
             <p>
@@ -177,6 +190,11 @@ const FlexDiv2 = styled.section`
     width: 19%;
     margin-left: 10px;
   }
+`;
+
+const DubaiVideo = styled.video`
+width: 100%;
+height: auto;
 `;
 
 const ContactImg = styled.img`
@@ -324,12 +342,10 @@ const ContactUs = styled.article`
   }
 `;
 const TwitterBox = styled.div`
-  height: 400px;
   overflow: scroll;
   height: auto;
-  /* 
   @media (min-width: 676px) {
-    height: 190px;
+    height: 300px;
   }
   @media (min-width: 800px) {
     height: 350px;
@@ -345,7 +361,25 @@ const TwitterBox = styled.div`
   }
   @media (min-width: 1200px) {
     height: 520px;
-  } */
+  }
+  @media (min-width: 1300px) {
+    height: 570px;
+  }
+  @media (min-width: 1400px) {
+    height: 620px;
+  }
+  @media (min-width: 1500px) {
+    height: 670px;
+  }
+  @media (min-width: 1500px) {
+    height: 690px;
+  }
+  @media (min-width: 1500px) {
+    height: 670px;
+  }
+  @media (min-width: 1500px) {
+    height: auto;
+  }
 `;
 const EmbedPlayer = styled.div`
 display:none;

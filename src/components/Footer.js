@@ -88,7 +88,7 @@ align-items: center;
     width:40%;
     margin:2%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 @media only screen and (min-width : 678px) {
     width:24%;
