@@ -3,6 +3,7 @@ import styled from 'styled-components/macro'
 import BusPageMainImage from "..//images/BusPageMainImage.jpg"
 import ReactPlayer from 'react-player/youtube'
 import { Sidebar } from "components/Sidebar"
+import UnceImage from "..//images/UnceImage.png"
 
 export const BusPage = () => {
     return (
@@ -11,9 +12,17 @@ export const BusPage = () => {
                 <Intro>
                     <img src={BusPageMainImage} alt="Dafo Buses" />
                     <MainText>
-                        <h1>Buses</h1>
-                        <p>Dafo is a market leader in extinguishing systems for vehicles and our Fire Suppression Systems for buses are approved according to the new regulation UNECE R107. Engines, hydraulics, fuel and electrical installations pose the greatest fire risks on buses. These fires often take hold very quickly and leave little time for evacuating the bus. Our systems are thoroughly EMC, vibration and temperature tested according to vehicle standards to ensure it will perform in any situation. <br />Many of the world’s leading bus manufacturers install Dafo systems in their assembly line. Our engineers understand the importance of modern lean production and find solutions that integrates our system in your manufacturing process. A low total cost of ownership is an important key factor for every bus operator. Dafo Fire Suppression Systems, with its superior maintenance intervals and reliability, contributes to increased profitability for manufacturers and operators. In the video below, you can see the effectiveness of an UNECE R107 approved Dafo Forrex Fire Suppression System.
+                        <h1>Automatic fire detection and suppression system for vehicles</h1>
+                        <p>Most bus fires start in the engine compartment and surrounding areas. A tested and certified vehicle fire suppression system in combination with a reliable fire detection system is the best first line of response in case of a thermal incident.</p>
+                        {"\n"}
+                        <p>
+                            Buses operate in various surroundings and climate types such as desert, tropic, arctic, on highways and in mountain terrain. These environments are very challenging also for a fire suppression system. Dafo fire suppression system are thoroughly tested for fire performance ability and environmental durability such as electromagnetic compatibility (EMC), vibration, corrosion and temperature extremes according to international vehicle standards to ensure the highest performance.
+                            Dafo fire suppression system are approved as a component with regard to UNECE Regulation no. 107 and P-marked in accordance with SPCR 183.
                         </p>
+                        <Center>
+                            <UNCE src={UnceImage} alt="UNCE type-approved" className="largerImg" />
+                        </Center>
+                        <br />
                         <a href="https://www.youtube.com/watch?v=yFrJz5tydMQ&t=50s"><Button>Live demo link..</Button> </a>
 
                     </MainText>
@@ -21,7 +30,7 @@ export const BusPage = () => {
                 <PlayerContainer>
                     <EmbedPlayer>
                         <ReactPlayer
-                            url="https://www.youtube.com/watch?v=yFrJz5tydMQ&t=50s" width='auto'
+                            url="https://www.youtube.com/watch?v=yFrJz5tydMQ&t=50s" width='100%'
                             height='100%'
                         />
                     </EmbedPlayer>
@@ -30,7 +39,7 @@ export const BusPage = () => {
             <FlexDiv2>
                 <Sidebar />
             </FlexDiv2>
-        </Wrapper>
+        </Wrapper >
     )
 }
 
@@ -105,14 +114,13 @@ p{
 }
 `;
 
-
-
 const EmbedPlayer = styled.div`
-display:none;
-@media(min-width:676px){
-display:inline-block;
-margin:0 auto;
-height: 400px;
+width: max-content;
+height: max-content;
+padding-bottom: 30px;
+@media(min-width:876px){
+width: 500px;
+height: 270px;
 }
 `;
 const PlayerContainer = styled.div`
@@ -123,5 +131,16 @@ margin-top: 40px;
 `;
 
 
+export const UNCE = styled.img`
+max-width: 300px;
+height: auto; 
+margin: 0 auto;
+border: 1px solid lightgray;
+`;
 
+export const Center = styled.div`
+width:100%;
+display:flex;
+align-content:center;
+`;
 

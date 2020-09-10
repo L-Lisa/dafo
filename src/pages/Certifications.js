@@ -2,8 +2,11 @@ import React, { useState } from "react"
 import styled from 'styled-components/macro'
 import { Mailinglist } from "../components/Mailinglist"
 import foldericon from "../images/foldericon.png"
+import Flame from "../images/dafoFlame.jpg"
+
 
 export const Certifications = () => {
+
     const [email, setEmail] = useState("");
     const [fName, setFName] = useState("");
     const [lName, setLName] = useState("");
@@ -118,6 +121,8 @@ div{
 ` */
 
 const DownloadsWrapper = styled.main`
+box-sizing:border-box;
+background-image: url(${Flame});
 margin-bottom: 40px;
 margin: 0 auto;
 width:90%;
@@ -125,6 +130,13 @@ max-width: 800px;
 display:flex;
 flex-direction: column;
 align-content:center;
+background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 @media only screen and (min-width : 450px) {
   width:80%;
 }
@@ -133,23 +145,23 @@ const Main = styled.div`
 display:flex;
 margin: 0 auto;
 flex-direction: column;
-padding: 30px;
 align-items: center;
 @media only screen and (min-width : 676px) {
-  flex-direction: row;
+  flex-direction: column;
 }
 `
 const FormBox = styled.section`
-padding: 10px;
 display:flex;
 justify-content: center;
 border: 1px solid #1c1c1c0f;
+background: #1c1c1cc4;
+width:auto;
+padding: 30px;
 box-shadow: 2px 2px 10px 2px rgb(207 204 204 / 70%);
 @media only screen and (min-width : 400px) {
-    width: 80%;
+    
 }
 @media only screen and (min-width : 990px) {
-    width: 35%;
   max-width: 550px;
 }
 `;
@@ -158,18 +170,24 @@ const IntroDiv = styled.div`
 align-self: baseline;
 padding: 16px;
 p{
-    width:90%;
-    max-width:250px;
-    margin: 10px 10px 40px 15px;
+    width: 90%;
+    max-width: 250px;
+    margin: 0 0px -17px 0px;
+    background: #ffffffd1;
+    padding: inherit;
 }
 h2{
     margin: 0 auto;
     color: white;
-    font-weight:bold;
     background:black;
     width: max-content;
     width: 90%;
     text-align: center;
+    padding: 5px;
+    max-width: 250px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
     margin-block-start: 0;
     @media (min-width:676px){
         padding-bottom: 5px;
@@ -182,18 +200,26 @@ width:100%;
 div{
     display: flex;
     flex-wrap: wrap;
-    line-height:1rem;
+    line-height:0.9em;
     flex-direction: column;
 }
 label{
     display:flex;
-    width: 110px;
+    width: auto;
+    text-transform:uppercase;
     margin-top: 15px;
+    color:#ffff;
 }
 input{
     margin: 16px;
+    padding:1rem;
 }
-`
+input.button{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+`;
 const DownloadsBox = styled.section`
 width:auto;
 margin: 30px;

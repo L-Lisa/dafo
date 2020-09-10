@@ -8,7 +8,7 @@ import contactUs from "..//images/contactUs.jpg"
 export const Sidebar = () => {
     return (
         <ContactUs>
-            <UNCE src={UnceImage} alt="UNCE type-approved" className="largerImg" />
+
             <h2>For more information</h2>
             <h3>Contact our representatives</h3>
             <Person src={JohanDafo} alt="Johan Larsson" />
@@ -17,16 +17,18 @@ export const Sidebar = () => {
                     <li> <h3>Johan Larsson</h3></li>
                     <li>Dafo Middle East</li>
                     <li>General Manager</li>
-                    <li>+971 55 143 60 88</li>
+                    <li>+971&nbsp;55&nbsp;143&nbsp;60&nbsp;88</li>
+                    <MailLink href="mailto:johan.larsson@dafo-middle-east.com">johan.larsson@dafo-middle-east.com</MailLink>
                 </ContactList>
             </div>
-            <Person src={Shadi} alt="Shadi Abdulla" />
+            <Person Shadi src={Shadi} alt="Shadi Abdulla" />
             <div>
                 <ContactList>
                     <li> <h3>Shadi Abdulla</h3></li>
                     <li>Dafo Middle East</li>
                     <li>Regional Manager</li>
-                    <li>+971 55 800 55 09</li>
+                    <li>+971&nbsp;55&nbsp;800&nbsp;55&nbsp;09</li>
+                    <MailLink href="mailto:abdullah.shadi@dafo-middle-east.com">abdullah.shadi@dafo-middle-east.com</MailLink>
                 </ContactList>
             </div>
             <Person src={contactUs} alt="Dafo Sales team" className="largerImg" />
@@ -34,17 +36,19 @@ export const Sidebar = () => {
                 <ContactList>
                     <li> <h3>Sales team</h3></li>
                     <li>Dafo Middle East</li>
+                    <li>+971&nbsp;4&nbsp;232&nbsp;3957</li>
+                    <MailLink href="mailto:sales@dafo-middle-east.com">sales@dafo-middle-east.com</MailLink>
                 </ContactList>
             </div>
-            <MailLink href="mailto:sales@dafo-middle-east.com">Email: <br />sales@dafo-middle-east.com</MailLink>
-
         </ContactUs>
     )
 }
 
 const MailLink = styled.a`
+display:flex;
+align-content:center;
 line-height: normal;
-width: 130px;
+width: 146px;
 padding-bottom:5px;
 
 `;
@@ -89,6 +93,7 @@ a{
 export const Person = styled.img`    
 width:35%;
 height: auto;
+border: ${props => props.Shadi ? "solid 1px #b0b0b0c9" : " "};
     @media (min-width:676px){
         width:57%;
         max-width:250px;
@@ -98,11 +103,7 @@ height: auto;
         max-width:250px;
     }
 `;
-export const UNCE = styled.img`
-width: 90%;
-max-width: 300px;
-margin: 0 20px 10px;
-`;
+
 
 const ContactList = styled.ul`
 padding-bottom: 13px;

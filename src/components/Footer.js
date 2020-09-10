@@ -3,41 +3,40 @@ import styled from 'styled-components/macro'
 import DafoBlack from "..//images/DafoBlack.jpg"
 import { Link } from "react-router-dom"
 import smeDxbTxt from "..//images/smeDbxTxt.jpg"
-
+import DafoWhite from "..//images/White-dafo-logo.png"
 export const Footer = () => {
     return (
         <FooterContainer>
             <Padding>
                 <Box1>
-                    <DafoBlackFoot src={DafoBlack} alt="Dafo Middle East" />
+                    <DafoBlackFoot src={DafoWhite} alt="Dafo Middle East" />
 
                 </Box1>
                 <Box2>
                     <div>
                         <h1>Follow Dafo</h1>
-                        <a href="https://www.facebook.com/dafobrand">Facebook</a>
-                        <br />
+
                         < a href="https://www.youtube.com/user/dafobrand">Youtube</a>
                         <br />
-                        < a href="https://twitter.com/Dafovehicle">Twitter</a>
-                        <br />
                         < a href="https://www.linkedin.com/company/dafo-middle-east">LinkedIn</a>
+                        <br />
+                        < a href="https://twitter.com/Dafovehicle">Twitter</a>
                     </div>
                 </Box2>
                 <Box3>
                     <div>
                         <h1>Dafo Middle East</h1>
-                        <p>
+                        <LocationP>
                             Clover bay tower<br />
     Office 1106 <br />
     Business bay <br />
     Dubai, UAE <br />
-                        </p>
-                        <p>
-                            +971 4 232 3957<br />
-                            <a href="mailto:info@dafo-middle-east.com">info@dafo-middle-east.com</a>
+                        </LocationP>
+                        <PhoneEmailP>
+                            +971&nbsp;4&nbsp;232&nbsp;3957 <br />
+                            <a href="mailto:info@dafo-middle-east.com ">info@dafo-middle-east.com </a>
 
-                        </p>
+                        </PhoneEmailP>
                     </div>
                 </Box3>
                 <Box4>
@@ -99,7 +98,7 @@ align-items: center;
 }`
 const DafoBlackFoot = styled.img`
     width: 165px;
-    height: 56px;
+    padding-bottom: 20px;
 `;
 const SmeSupport = styled.section`
 height: auto;
@@ -151,9 +150,6 @@ div{
     display:flex;
     flex-direction:column;
 }
-p{
-        margin:0;
-    }
 @media only screen and (min-width : 480px) {
     width:40%;
     margin:2%;
@@ -173,6 +169,14 @@ p{
     width:15%;
 }
 `;
+const LocationP = styled.p`
+margin:0px;
+`;
+
+const PhoneEmailP = styled.p`
+margin-top: 8px;
+`;
+
 const Box4 = styled.div`
 width:90%;
 margin:5%;

@@ -13,14 +13,16 @@ import DafoRedNoBackground from "..//images/DafoVehicleLogoNoBackground.png"
 export const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [showProducts, setShowProducts] = useState(false)
+    const [showMenuX, setShowMenuX] = useState(false)
     return (
         < HeaderWrapper >
             <TopHeader>
                 <SocialMediaBox>
-                    <a href="https://www.facebook.com/dafobrand"><LogoIcon src={facebookicon} alt="Dafo Facebook link" /></a>
+                    <a href="https://www.youtube.com/channel/UCnnPIlXaWwE-wY3X-l3nTXw"><LogoIcon src={youtubeicon} alt="Dafo Youtube link" /></a>
                     < a href="https://www.linkedin.com/company/dafo-middle-east"><LogoIcon src={Linkedin} alt="Dafo youtube link" /></a>
                     < a href="https://twitter.com/Dafovehicle"><LogoIcon src={twittericon} alt="Dafo twitter link" /></a>
-                    <VehicleImg src={DafoRedNoBackground} alt="Dafo Middle East" />
+
+                    <Link to="/"><VehicleImg src={DafoRedNoBackground} alt="Dafo Middle East" /></Link>
                 </SocialMediaBox>
 
                 <MiniNav>
@@ -39,24 +41,24 @@ export const Header = () => {
 
                     <Hamburger>
                         <div className="container" onClick={() => setShowMenu(!showMenu)}>
-                            <div className="bar1"></div>
-                            <div className="bar2"></div>
-                            <div className="bar3"></div>
 
-
+                            <div className={showMenu ? `xclose1` : `bar1`}></div>
+                            <div className={showMenu ? `xclose2` : `bar2`}></div>
+                            <div className={showMenu ? `xclose3` : `bar3`}></div>
                         </div>
+
                     </Hamburger>
                 </BurgerBox>
                 {showMenu &&
                     <ul>
                         <li>
-                            <NavLink to="/bus" onClick={() => setShowMenu(false)}>Buses</NavLink>
+                            <NavLink to="/bus" onClick={() => setShowMenu(false)}>Vehicles</NavLink>
                         </li>
                         <li>
                             <NavLink to="/powergenerators" onClick={() => setShowMenu(false)}>Power generators </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/mining-constructon" onClick={() => setShowMenu(false)}>Mining & Construction</NavLink>
+                            <NavLink to="/mining-constructon" onClick={() => setShowMenu(false)}>Mining & heavy duty mobile equipment</NavLink>
                         </li>
                         <li>
                             <NavLink to="#" onClick={() => setShowMenu(false)}>Services</NavLink>
@@ -104,14 +106,18 @@ export const Header = () => {
             </InlineNav>
             {showProducts &&
                 <InlineNav2 id="close" >
+
+
+                    <ProductNav>Automatic fire detection and suppression system for:</ProductNav>
+
                     <Li2>
-                        <NavLink to="/bus" onClick={() => setShowProducts(false)}>Buses</NavLink>
+                        <NavLink to="/bus" onClick={() => setShowProducts(false)}>Vehicles</NavLink>
                     </Li2>
                     <Li2>
                         <NavLink to="/powergenerators" onClick={() => setShowProducts(false)}>Powergenerators</NavLink>
                     </Li2>
                     <Li2>
-                        <NavLink to="/mining-constructon" onClick={() => setShowProducts(false)} >Mining & Construction</NavLink>
+                        <NavLink to="/mining-constructon" onClick={() => setShowProducts(false)} >Mining & heavy duty mobile equipment</NavLink>
                     </Li2>
                 </InlineNav2>
             }
@@ -193,15 +199,19 @@ ul{
     text-decoration:none;
     width: auto;
     margin-left: 50%;
-    background: #fff;
-
+    margin-top: -1px;
+    background: #1c1c1c;
+    padding-bottom: 10px;
 }
 li{
-    
+    line-height: 1.7rem;
 }
 a{
     text-decoration:none;
-    color: #1c1c1c;
+    color: #ffff;
+    &:hover{
+        color:gray;
+    }
 }
 `;
 const Hamburger = styled.div`
@@ -212,6 +222,9 @@ margin-right: 5px;
 .container {
   display: inline-block;
   cursor: pointer;
+  height: 32px;
+    width: 100%;
+    margin-bottom: 15px;
   @media(min-width:676px){
     display:none;
 }
@@ -219,11 +232,34 @@ margin-right: 5px;
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #ed273e;
+  background-color: #eb0e0c;
   margin: 6px 0;
   transition: 0.4s;
   border-radius:2px;
-
+}
+.xclose1 {
+width: 70px;
+  height: 10px;
+  background-color: #eb0e0c;
+  margin: 6px 10px 0 0;
+  border-radius:2px;
+  top:  19px;
+  left:-7px;
+  transform: scale(0.5) rotate(-45deg);
+}
+.xclose2{
+    display:none;
+}
+.xclose3{
+    width: 70px;
+  height: 10px;
+  background-color: #eb0e0c;
+  margin: -10px 0;
+  transition: 0.4s;
+  border-radius:2px;
+top: 20px;
+left:-7px;
+transform: scale(0.5) rotate(45deg);  
 }
 `;
 
@@ -277,6 +313,11 @@ color:#626262a3;
         color:black;
 }}
 `;
+const ProductNav = styled.p`
+margin-top: 0px;
+padding-right: 12px;
+color:#626262;
+`;
 
 const Li2 = styled.li`
 list-style:none;
@@ -285,6 +326,7 @@ list-style:none;
     &:hover{
         border-radius:5%;
         transform: scale(1.1);
+        color:#626262;
     }
 `;
 

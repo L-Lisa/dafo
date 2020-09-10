@@ -52,26 +52,21 @@ export const MainPage = () => {
           </DubaiVideo>
 
           {/*  <img src="https://res.cloudinary.com/dnjk2bwkp/image/upload/v1599474586/dafo/DafoDubaiLrgFullColr_epa5j9.jpg" type="jpg" alt="Dafo Middle East" /> */}
-          <PlayerContainer>
-            {/*  <EmbedPlayer>
+          {/*  <PlayerContainer>
+             <EmbedPlayer>
               <ReactPlayer
                 url="https://res.cloudinary.com/dnjk2bwkp/video/upload/v1599401569/dafomainAnimComp_i9irc2.mp4" width='auto'
                 height='100%'
               />
-            </EmbedPlayer> */}
-          </PlayerContainer>
+            </EmbedPlayer> 
+          </PlayerContainer>*/}
 
           {/* <img src={DafoDubaiFull} alt="Dafo" /> */}
           <MainText>
             <h1>Fire & rescue systems for your safety</h1>
             <p>
-              Since its beginnings back in 1919, Dafo Brand has developed into a
-              modern, high-tech company. As the biggest Nordic supplier of fire
-              suppression systems and fire safety equipment we can always
-              provide you with the best solution. Our fire suppression systems
-              are used worldwide and are installed on the assembly line by many
-              of the world’s leading manufacturers. Our goal is to make sure all
-              our customers are safe and secure.
+              Dafo was one of the first companies in the world which started to develop integrated firefighting solutions for vehicles. Over the years Dafo has obtained vas experience and knowledge from our end user installations which have been used as a basis for eliminating false alarms and false releases. As a result of the development Dafo can today proudly present state of the art reliable solutions without vulnerable and pressurized agent containers.
+              With more than 165000 vehicle systems sold worldwide knowhow and experience ensure our customers to have the latest technology combined with proven reliability.
             </p>
           </MainText>
         </Intro>
@@ -83,12 +78,12 @@ export const MainPage = () => {
           </Link>
           <Link to="/bus">
             <BusBlockImg className="product-block">
-              <h4>Buses</h4>
+              <h4>Vehicles</h4>
             </BusBlockImg>
           </Link>
           <Link to="/mining-constructon">
             <MiningConstructionImg className="product-block">
-              <h4>Mining & Construction</h4>
+              <h4>Mining & heavy duty mobile equipment</h4>
             </MiningConstructionImg>
           </Link>
         </ProductsDiv>
@@ -381,7 +376,8 @@ const TwitterBox = styled.div`
     height: auto;
   }
 `;
-const EmbedPlayer = styled.div`
+
+/* const EmbedPlayer = styled.div`
 display:none;
 @media(min-width:676px){
 display:inline-block;
@@ -394,4 +390,4 @@ width: max-content;
 height:auto;
 margin: 0 auto;
 margin-top: 40px;
-`;
+`; */
