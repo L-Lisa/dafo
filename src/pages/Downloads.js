@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from 'styled-components/macro'
 import { Mailinglist } from "../components/Mailinglist"
 import foldericon from "../images/foldericon.png"
+import WhiteFlame from "../images/White-dafo-flame.png"
 
 export const Downloads = () => {
     const [email, setEmail] = useState("");
@@ -15,94 +16,99 @@ export const Downloads = () => {
     };
 
     return (
-        <DownloadsWrapper>
-            {!showInfo ? (
-                <Main>
-                    <IntroDiv>
-                        <h2>Downloads</h2> <p>Enter your details here to proceed to our download library and join our mailing list.</p>
-                    </IntroDiv>
-                    <FormBox>
-                        <div id="mc_embed_signup">
-                            <Form
-                                action="https://dafo-middle-east.us4.list-manage.com/subscribe/post-json?u=4fc9766f7a3940cb4177774a4&amp;id=93f2cf16ba&c=?"
-                                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate"
-                                target="hiddenFrame" novalidate
-                            >
-                                <div id="mc_embed_signup_scroll">
-                                    <div className="mc-field-group">
-                                        <label htmlFor="mce-EMAIL">Email Address
-                                    </label>
-                                        <input
-                                            value={email}
-                                            type="email"
-                                            required
-                                            name="EMAIL"
-                                            className="required email"
-                                            id="mce-EMAIL"
-                                            onChange={event => setEmail(event.target.value)}
-                                        />
-                                    </div>
-                                    <div className="mc-field-group">
-                                        <label htmlFor="mce-FNAME">First Name </label>
-                                        <input
-                                            type="text"
-                                            required
-                                            value={fName}
-                                            name="FNAME"
-                                            className=""
-                                            id="mce-FNAME"
-                                            onChange={event => setFName(event.target.value)}
-                                        />
-                                    </div>
-                                    <div className="mc-field-group">
-                                        <label htmlFor="mce-LNAME">Last Name </label>
-                                        <input
-                                            type="text"
-                                            value={lName}
-                                            name="LNAME"
-                                            className=""
-                                            id="mce-LNAME"
-                                            onChange={event => setLName(event.target.value)} />
-                                    </div>
-                                    <div id="mce-responses" className="clear">
-                                        <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
-                                        <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
-                                    </div>
-
-                                    <div style={{ position: "absolute", left: "-5000px", }} aria-hidden="true">
-                                        <input type="text"
-                                            name="b_4fc9766f7a3940cb4177774a4_93f2cf16ba"
-                                            tabIndex="-1"
-                                            value=" " />
-                                    </div>
-                                    <div>
-                                        <div className="clear" >
-                                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                                                className="button"
+        <Color>
+            <DownloadsWrapper>
+                {!showInfo ? (
+                    <Main>
+                        <IntroDiv>
+                            <h2>Downloads</h2> <p>Enter your details here to proceed to our download library and join our mailing list.</p>
+                        </IntroDiv>
+                        <FormBox>
+                            <div id="mc_embed_signup">
+                                <Form
+                                    action="https://dafo-middle-east.us4.list-manage.com/subscribe/post-json?u=4fc9766f7a3940cb4177774a4&amp;id=93f2cf16ba&c=?"
+                                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate"
+                                    target="hiddenFrame" novalidate
+                                >
+                                    <div id="mc_embed_signup_scroll">
+                                        <div className="mc-field-group">
+                                            <label htmlFor="mce-EMAIL">
+                                            </label>
+                                            <input
+                                                value={email}
+                                                type="email"
+                                                required
+                                                placeholder="Email Address"
+                                                name="EMAIL"
+                                                className="required email"
+                                                id="mce-EMAIL"
+                                                onChange={event => setEmail(event.target.value)}
                                             />
-                                            {/*  <div className="indicates-required"><span className="asterisk">*</span> indicates required</div> */}
-                                            {/*  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                                        </div>
+                                        <div className="mc-field-group">
+                                            <label htmlFor="mce-FNAME"></label>
+                                            <input
+                                                type="text"
+                                                placeholder="First Name"
+                                                required
+                                                value={fName}
+                                                name="FNAME"
+                                                className=""
+                                                id="mce-FNAME"
+                                                onChange={event => setFName(event.target.value)}
+                                            />
+                                        </div>
+                                        <div className="mc-field-group">
+                                            <label htmlFor="mce-LNAME"> </label>
+                                            <input
+                                                placeholder="Last Name"
+                                                type="text"
+                                                value={lName}
+                                                name="LNAME"
+                                                className=""
+                                                id="mce-LNAME"
+                                                onChange={event => setLName(event.target.value)} />
+                                        </div>
+                                        <div id="mce-responses" className="clear">
+                                            <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
+                                            <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
+                                        </div>
+
+                                        <div style={{ position: "absolute", left: "-5000px", }} aria-hidden="true">
+                                            <input type="text"
+                                                name="b_4fc9766f7a3940cb4177774a4_93f2cf16ba"
+                                                tabIndex="-1"
+                                                value=" " />
+                                        </div>
+                                        <div>
+                                            <div className="clear" >
+                                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                                                    className="button"
+                                                />
+                                                {/*  <div className="indicates-required"><span className="asterisk">*</span> indicates required</div> */}
+                                                {/*  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
                                         <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script> */}
-                                        </div></div>
-                                </div>
-                            </Form>
-                            <iframe onLoad={() => setShowInfo(true)} name="hiddenFrame" src="about:blank" style={{ display: 'none' }}></iframe>
-                        </div>
-                    </FormBox>
-                </Main>
+                                            </div></div>
+                                    </div>
+                                </Form>
+                                <iframe onLoad={() => setShowInfo(true)} name="hiddenFrame" src="about:blank" style={{ display: 'none' }}></iframe>
+                            </div>
+                        </FormBox>
+                    </Main>
 
-            ) : (
-                    <DownloadsBox>
-                        <FolderBox href=" https://dafomiddleeast.sharepoint.com/sites/download/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fdownload%2FShared%20Documents%2FDafo%20files&p=true&originalPath=aHR0cHM6Ly9kYWZvbWlkZGxlZWFzdC5zaGFyZXBvaW50LmNvbS86Zjovcy9kb3dubG9hZC9FazdGSm03ZE1EeEVnZURrc1ZwX21ud0JWdnotMmROWldOdE5xUVpzcVQzVElnP3J0aW1lPTdSbUh5enM4MkVn">
-                            <Thanks>Welcome, please follow this link to brows the downloadable files
+                ) : (
+                        <DownloadsBox>
+                            <FolderBox href=" https://dafomiddleeast.sharepoint.com/sites/download/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fdownload%2FShared%20Documents%2FDafo%20files&p=true&originalPath=aHR0cHM6Ly9kYWZvbWlkZGxlZWFzdC5zaGFyZXBvaW50LmNvbS86Zjovcy9kb3dubG9hZC9FazdGSm03ZE1EeEVnZURrc1ZwX21ud0JWdnotMmROWldOdE5xUVpzcVQzVElnP3J0aW1lPTdSbUh5enM4MkVn">
+                                <Thanks>Welcome, please follow this link to brows the downloadable files
                             <AccessButton><img src={foldericon} alt="Dafo downloads" />Download Library</AccessButton>
-                            </Thanks>
+                                </Thanks>
 
-                        </FolderBox>
-                    </DownloadsBox>
-                )}
+                            </FolderBox>
+                        </DownloadsBox>
+                    )}
 
-        </DownloadsWrapper >
+            </DownloadsWrapper >
+        </Color>
     )
 }
 
@@ -118,8 +124,18 @@ div{
     padding:40px;
 }
 ` */
-
+const Color = styled.div`
+background-color:lightgray;
+`
 const DownloadsWrapper = styled.main`
+/* background-image: url(${WhiteFlame}); */
+background-position: center;
+background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 margin-bottom: 40px;
 margin: 0 auto;
 width:90%;
@@ -137,8 +153,10 @@ margin: 0 auto;
 flex-direction: column;
 padding: 30px;
 align-items: center;
+background: white;
+    margin: 25px;
 @media only screen and (min-width : 676px) {
-  flex-direction: row;
+  
 }
 `
 const FormBox = styled.section`
@@ -146,12 +164,12 @@ padding: 10px;
 display:flex;
 justify-content: center;
 border: 1px solid #1c1c1c0f;
+background: #fff;
 box-shadow: 2px 2px 10px 2px rgb(207 204 204 / 70%);
 @media only screen and (min-width : 400px) {
     width: 80%;
 }
 @media only screen and (min-width : 990px) {
-    width: 35%;
   max-width: 550px;
 }
 `;
@@ -166,11 +184,15 @@ p{
 h2{
     margin: 0 auto;
     color: white;
-    font-weight:bold;
     background:black;
     width: max-content;
     width: 90%;
     text-align: center;
+    padding: 5px;
+    max-width: 250px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
     margin-block-start: 0;
     @media (min-width:676px){
         padding-bottom: 5px;
@@ -192,7 +214,14 @@ label{
     margin-top: 15px;
 }
 input{
-    margin: 4px;
+    border: none;
+    background: lightgray;
+    height: 2rem;
+    text-transform: uppercase;
+    padding-left: 5px;
+}
+input.button{
+    margin: 15px; 
 }
 `
 const DownloadsBox = styled.section`

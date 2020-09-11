@@ -131,7 +131,7 @@ display:flex;
 flex-direction: column;
 align-content:center;
 background-position: center;
-    background-repeat: no-repeat;
+background-repeat: no-repeat;
     background-size: contain;
     position: relative;
     display: flex;

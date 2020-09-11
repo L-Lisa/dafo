@@ -276,7 +276,7 @@ ul{
 a{
 text-decoration:none;
 transition: transform .2s;
-padding:0 16px 0 0 ;
+padding: 0 8px 0 8px;
 color:#626262;
 &:hover{
         color:black;
