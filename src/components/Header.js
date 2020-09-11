@@ -198,13 +198,17 @@ ul{
     list-style:none;
     text-decoration:none;
     width: auto;
-    margin-left: 50%;
+    margin-left: 20%;
     margin-top: -1px;
     background: #1c1c1c;
     padding-bottom: 10px;
 }
 li{
     line-height: 1.7rem;
+   /*  &:nth-child(2){
+        margin-bottom: 20px;
+        color: red !important;
+    } */
 }
 a{
     text-decoration:none;
