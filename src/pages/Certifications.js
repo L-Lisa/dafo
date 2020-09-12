@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from 'styled-components/macro'
 import { Mailinglist } from "../components/Mailinglist"
 import foldericon from "../images/foldericon.png"
-import Flame from "../images/dafoFlame.jpg"
+import DafoRedFlame from "../images/DafoRedFlame.jpg"
 
 
 export const Certifications = () => {
@@ -122,7 +122,7 @@ div{
 
 const DownloadsWrapper = styled.main`
 box-sizing:border-box;
-background-image: url(${Flame});
+background-image: url(${DafoRedFlame});
 margin-bottom: 40px;
 margin: 0 auto;
 width:90%;
@@ -133,7 +133,6 @@ align-content:center;
 background-position: center;
 background-repeat: no-repeat;
     background-size: contain;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,6 +156,7 @@ border: 1px solid #1c1c1c0f;
 background: #1c1c1cc4;
 width:auto;
 padding: 30px;
+margin-bottom: 20px;
 box-shadow: 2px 2px 10px 2px rgb(207 204 204 / 70%);
 @media only screen and (min-width : 400px) {
     

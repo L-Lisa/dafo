@@ -37,7 +37,7 @@ export const MainPage = () => {
     <Wrapper>
       <FlexDiv1>
         <Intro>
-
+          <img src="https://res.cloudinary.com/dnjk2bwkp/image/upload/v1599474586/dafo/DafoDubaiLrgFullColr_epa5j9.jpg" type="jpg" alt="Dafo Middle East" />
           <DubaiVideo
             display="inline"
             height="400"
@@ -47,7 +47,7 @@ export const MainPage = () => {
             preload="auto"
             poster="poster.png">
             <source src="https://res.cloudinary.com/dnjk2bwkp/video/upload/v1599663150/dafo/DafoDubaiMe9_pobkul.mp4" type="video/mp4" />
-            <img src="https://res.cloudinary.com/dnjk2bwkp/image/upload/v1599474586/dafo/DafoDubaiLrgFullColr_epa5j9.jpg" type="jpg" alt="Dafo Middle East" />
+
             <p>Image loading..</p>
           </DubaiVideo>
 
@@ -69,6 +69,8 @@ export const MainPage = () => {
               With more than 165000 vehicle systems sold worldwide knowhow and experience ensure our customers to have the latest technology combined with proven reliability.
             </p>
           </MainText>
+
+
         </Intro>
         <ProductsDiv>
           <Link to="/powergenerators">

@@ -132,7 +132,6 @@ const DownloadsWrapper = styled.main`
 background-position: center;
 background-repeat: no-repeat;
     background-size: contain;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
