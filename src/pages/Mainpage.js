@@ -83,7 +83,7 @@ export const MainPage = () => {
           </Link>
           <Link to="/mining-constructon">
             <MiningConstructionImg className="product-block">
-              <h4>Mining & heavy duty mobile equipment</h4>
+              <MiningH>Mining & heavy duty mobile equipment</MiningH>
             </MiningConstructionImg>
           </Link>
         </ProductsDiv>
@@ -294,7 +294,15 @@ const MiningConstructionImg = styled.div`
     width: 100%;
   }
 `;
-
+const MiningH = styled.h4`
+width:60%;
+@media (min-width: 320px) {
+    width: 50% !important;
+  }
+  @media (min-width: 550px) {
+    width: 40% !important;
+  }
+`
 const ContactUs = styled.article`
   box-sizing: border-box;
   width: 100%;
