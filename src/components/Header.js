@@ -308,6 +308,14 @@ box-sizing: border-box;
     justify-content: center;
     padding: 20px 10px;
     margin-top:-25px;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 20%;
+    @media only screen and (min-width : 1000px) {
+  flex-direction:row;
+  text-align:left;
+  margin-left:unset;
+}
 a{
 text-decoration:none;
 transition: transform .2s;
