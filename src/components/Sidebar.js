@@ -17,7 +17,7 @@ export const Sidebar = () => {
                     <li> <h3>Johan Larsson</h3></li>
                     <li>Dafo Middle East</li>
                     <li>General Manager</li>
-                    <li>+971&nbsp;55&nbsp;143&nbsp;60&nbsp;88</li>
+                    <li>+971&nbsp;55&nbsp;143&nbsp;6088</li>
                     <MailLink href="mailto:johan.larsson@dafo-middle-east.com">johan.larsson@dafo-middle-east.com</MailLink>
                 </ContactList>
             </div>
@@ -27,7 +27,7 @@ export const Sidebar = () => {
                     <li> <h3>Shadi Abdulla</h3></li>
                     <li>Dafo Middle East</li>
                     <li>Regional Manager</li>
-                    <li>+971&nbsp;55&nbsp;800&nbsp;55&nbsp;09</li>
+                    <li>+971&nbsp;55&nbsp;800&nbsp;5509</li>
                     <MailLink href="mailto:abdullah.shadi@dafo-middle-east.com">abdullah.shadi@dafo-middle-east.com</MailLink>
                 </ContactList>
             </div>
@@ -80,6 +80,7 @@ li{
 h3{
     display: inline;
     text-align: center;
+    margin-top: -10px;
 }
 div{
     padding-bottom: 10px;

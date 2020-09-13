@@ -209,6 +209,7 @@ label{
     text-transform:uppercase;
     margin-top: 15px;
     color:#ffff;
+    margin: 0 auto;
 }
 input{
     margin: 16px;

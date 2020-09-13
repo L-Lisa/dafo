@@ -2,13 +2,13 @@ import React, { useState } from "react"
 import styled from 'styled-components/macro'
 import dafoMEred from "..//images/dafoMEred.jpg"
 import { Link, NavLink } from "react-router-dom"
-import facebookicon from "..//images/facebookicon.png"
 import youtubeicon from "..//images/youtubeicon.png"
 import twittericon from "..//images/twittericon.png"
 import Linkedin from "..//images/Linkedin.png"
 import Vehicle from "..//images/Vehicle.jpg"
 import redNblack from "..//images/redNblackLogo.png"
 import DafoRedNoBackground from "..//images/DafoVehicleLogoNoBackground.png"
+import DafoRedFlame from "../images/DafoRedFlame.jpg"
 
 export const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -81,6 +81,7 @@ export const Header = () => {
                         <li>
                             <NavLink to="/" onClick={() => setShowMenu(false)}>Home</NavLink>
                         </li>
+                        {/* <img src={DafoRedFlame} alt="Dafo Middle East" /> */}
                     </ul>
                 }
             </Nav>
@@ -195,6 +196,7 @@ justify-content:space-between;
 const Nav = styled.nav`
 background:white;
 ul{
+    
     list-style:none;
     text-decoration:none;
     width: auto;
@@ -202,13 +204,16 @@ ul{
     margin-top: -1px;
     background: #1c1c1c;
     padding-bottom: 10px;
+    li:nth-child(odd) {
+        background: #3f3e3e;
+    display: inline;
+    padding: 0 6px;
+    border-radius: 2px;   
+}
 }
 li{
     line-height: 1.7rem;
-   /*  &:nth-child(2){
-        margin-bottom: 20px;
-        color: red !important;
-    } */
+    
 }
 a{
     text-decoration:none;

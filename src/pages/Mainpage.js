@@ -113,7 +113,7 @@ export const MainPage = () => {
                 Telephone:
                 <h3>
                   <br />
-                  +971 4 232 3957
+                  +971&nbsp;4&nbsp;232&nbsp;3957
                 </h3>
               </li>
 
