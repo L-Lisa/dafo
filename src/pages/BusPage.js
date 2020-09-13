@@ -23,8 +23,6 @@ export const BusPage = () => {
                             <UNCE src={UnceImage} alt="UNCE type-approved" className="largerImg" />
                         </Center>
                         <br />
-                        <a href="https://www.youtube.com/watch?v=yFrJz5tydMQ&t=50s"><Button>Live demo link..</Button> </a>
-
                     </MainText>
                 </Intro>
                 <PlayerContainer>
@@ -35,6 +33,7 @@ export const BusPage = () => {
                         />
                     </EmbedPlayer>
                 </PlayerContainer>
+                <a href="https://www.youtube.com/watch?v=yFrJz5tydMQ&t=50s"><Button>Live demo link..</Button> </a>
             </FlexDiv1>
             <FlexDiv2>
                 <Sidebar />
@@ -119,8 +118,8 @@ width: max-content;
 height: max-content;
 padding-bottom: 30px;
 @media(min-width:876px){
-width: 500px;
-height: 270px;
+    width: 564px;
+    height: 350px;
 }
 `;
 const PlayerContainer = styled.div`

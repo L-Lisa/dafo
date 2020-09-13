@@ -6,14 +6,16 @@ import UnceImage from "..//images/UnceImage.png";
 import Mining from "..//images/ProductImg-Mining.jpg";
 import PowerGen from "..//images/ProductImg-powerGenerator.jpeg";
 import contactUs from "..//images/contactUs.jpg";
-import DafoDubaiME from "..//images/DafoDubaiM-E.jpg";
-import DafoDubaiLrgLogo from "images/DafoDubaiLrgLogo.png";
-import DafoDubaiFull from "images/DafoDubaiLrgFullColr.jpg";
+import DafoDubaiME from "..//images/dafoMEred.jpg";
 import { Link } from "react-router-dom";
 import { Timeline } from "react-twitter-widgets";
 import ReactPlayer from 'react-player/youtube'
-
+import { VideoBackground } from "..//components/VideoBackground.js"
+import Dafo400 from "images/DafoDubai400.png"
 // import style from "../index.css" ;
+
+
+
 export const MainPage = () => {
   const [twitterLoaded, settwitterLoaded] = useState(false);
   useEffect(() => {
@@ -37,7 +39,12 @@ export const MainPage = () => {
     <Wrapper>
       <FlexDiv1>
         <Intro>
-          <img src="https://res.cloudinary.com/dnjk2bwkp/image/upload/v1599474586/dafo/DafoDubaiLrgFullColr_epa5j9.jpg" type="jpg" alt="Dafo Middle East" />
+          {/*  <DafoImage src={Dafo400} alt="Dafo" /> */}
+          {/*  <VideoBackground videoSource={"https://res.cloudinary.com/dnjk2bwkp/video/upload/v1599940534/smlDafoDubaiBackground_hmayt7.mp4"} ImgFront={"DafoDubaiME"}></VideoBackground> */}
+
+
+
+          {/*  <img src="https://res.cloudinary.com/dnjk2bwkp/image/upload/v1599474586/dafo/DafoDubaiLrgFullColr_epa5j9.jpg" type="jpg" alt="Dafo Middle East" /> */}
           <DubaiVideo
             display="inline"
             height="400"
@@ -46,22 +53,22 @@ export const MainPage = () => {
             muted
             preload="auto"
             poster="poster.png">
-            <source src="https://res.cloudinary.com/dnjk2bwkp/video/upload/v1599663150/dafo/DafoDubaiMe9_pobkul.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dnjk2bwkp/video/upload/v1600007246/dafo/mediumTransp_amf8r5.mp4" type="video/mp4" />
 
             <p>Image loading..</p>
           </DubaiVideo>
 
           {/*  <img src="https://res.cloudinary.com/dnjk2bwkp/image/upload/v1599474586/dafo/DafoDubaiLrgFullColr_epa5j9.jpg" type="jpg" alt="Dafo Middle East" /> */}
           {/*  <PlayerContainer>
-             <EmbedPlayer>
+            <EmbedPlayer>
               <ReactPlayer
-                url="https://res.cloudinary.com/dnjk2bwkp/video/upload/v1599401569/dafomainAnimComp_i9irc2.mp4" width='auto'
+                url="https://res.cloudinary.com/dnjk2bwkp/video/upload/v1600007246/dafo/mediumTransp_amf8r5.mp4" width='auto'
                 height='100%'
               />
-            </EmbedPlayer> 
-          </PlayerContainer>*/}
+            </EmbedPlayer>
+          </PlayerContainer> */}
 
-          {/* <img src={DafoDubaiFull} alt="Dafo" /> */}
+
           <MainText>
             <h1>Fire & rescue systems for your safety</h1>
             <p>
@@ -90,6 +97,7 @@ export const MainPage = () => {
           </Link>
         </ProductsDiv>
       </FlexDiv1>
+
       <FlexDiv2>
         <ContactUs>
           <h2>Contact Us</h2>
@@ -193,6 +201,10 @@ const DubaiVideo = styled.video`
 width: 100%;
 height: auto;
 `;
+const DafoImage = styled.img`
+width:100%;
+height:auto;
+`;
 
 const ContactImg = styled.img`
   max-width: 250px;
@@ -208,12 +220,12 @@ const Intro = styled.div`
   h1 {
     font-weight: bold;
   }
-  img {
-    width: inherit;
+`;
+const PhoneImg = styled.img`
+width: inherit;
     max-width: 100%;
     height: auto;
-  }
-`;
+`
 const MainText = styled.div`
   padding: 0 30px;
   @media (min-width: 676px) {
@@ -304,6 +316,9 @@ width:60%;
   @media (min-width: 550px) {
     width: 40% !important;
   }
+  @media (min-width: 678px) {
+    width: 90% !important;
+  }
 `
 const ContactUs = styled.article`
   box-sizing: border-box;
@@ -387,7 +402,7 @@ const TwitterBox = styled.div`
   }
 `;
 
-/* const EmbedPlayer = styled.div`
+const EmbedPlayer = styled.div`
 display:none;
 @media(min-width:676px){
 display:inline-block;
@@ -400,4 +415,4 @@ width: max-content;
 height:auto;
 margin: 0 auto;
 margin-top: 40px;
-`; */
+`;

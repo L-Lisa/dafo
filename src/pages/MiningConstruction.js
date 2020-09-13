@@ -1,6 +1,7 @@
 import React from "react"
 import styled from 'styled-components/macro'
-import Mining from "..//images/Mining.jpg"
+/* import oldMining from "..//images/Mining.jpg" */
+import Mining from "..//images/catepillar.jpg"
 import { Sidebar } from "components/Sidebar"
 
 export const MiningConstruction = () => {
@@ -8,7 +9,8 @@ export const MiningConstruction = () => {
         <Wrapper>
             <FlexDiv1>
                 <Intro>
-                    <img src={Mining} alt="Dafo Mining and construction" />
+                    <MiningImg src={Mining} alt="Dafo Mining and construction" />
+                    {/* <img src={oldMining} alt="Dafo Mining and construction" /> */}
                     <MainText>
                         <h1>Fire safety for contracting mining machinery</h1>
                         <p>
@@ -81,12 +83,11 @@ align-items: center;
 h1{
     font-weight:bold;
 }
-img{
-    width:100%;
-    height: auto;
-}
 `;
-
+const MiningImg = styled.img`
+ width:100%;
+    height: auto;
+`
 const MainText = styled.div`
 padding: 0 30px;
 p{
