@@ -12,6 +12,8 @@ import { Timeline } from "react-twitter-widgets";
 import ReactPlayer from 'react-player/youtube'
 import { VideoBackground } from "..//components/VideoBackground.js"
 import Dafo400 from "images/DafoDubai400.png"
+import HeroLogo from "images/DafoMeNoBackTransp.png"
+import DafoDubai from "images/DafoDubai.jpg"
 // import style from "../index.css" ;
 
 
@@ -57,7 +59,11 @@ export const MainPage = () => {
 
             <p>Image loading..</p>
           </DubaiVideo>
+          {/* <DafoImage src={Dafo400} alt="Dafo" /> */}
 
+          <Hero>
+            <DafoHeroLogo src={HeroLogo} alt="Dafo" />
+          </Hero>
           {/*  <img src="https://res.cloudinary.com/dnjk2bwkp/image/upload/v1599474586/dafo/DafoDubaiLrgFullColr_epa5j9.jpg" type="jpg" alt="Dafo Middle East" /> */}
           {/*  <PlayerContainer>
             <EmbedPlayer>
@@ -202,9 +208,31 @@ width: 100%;
 height: auto;
 `;
 const DafoImage = styled.img`
-width:100%;
-height:auto;
+    width: 30%;
+    max-width: 200px;
+    margin-top: -36%;
+    margin-left: 0%;
+    @media (min-width: 1200px) {
+      margin-top: -30%;
+    }
 `;
+
+const Hero = styled.section`
+width:100%;
+height: 80vh;
+background-image: url(${DafoDubai});
+background-position: top;
+background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+`;
+const DafoHeroLogo = styled.img`
+width:50%;
+margin-top:40px;
+max-width: 400px;
+`
 
 const ContactImg = styled.img`
   max-width: 250px;
