@@ -4,13 +4,15 @@ import BusPageMainImage from "..//images/BusPageMainImage.jpg"
 import ReactPlayer from 'react-player/youtube'
 import { Sidebar } from "components/Sidebar"
 import UnceImage from "..//images/UnceImage.png"
+import BusGirl from "..//images/BusGirl.jpeg"
+
 
 export const BusPage = () => {
     return (
         <Wrapper>
             <FlexDiv1>
                 <Intro>
-                    <img src={BusPageMainImage} alt="Dafo Buses" />
+                    <img src={BusGirl} alt="Dafo Buses" />
                     <MainText>
                         <h1>Automatic fire detection and suppression system for vehicles</h1>
                         <p>Most bus fires start in the engine compartment and surrounding areas. A tested and certified vehicle fire suppression system in combination with a reliable fire detection system is the best first line of response in case of a thermal incident.</p>

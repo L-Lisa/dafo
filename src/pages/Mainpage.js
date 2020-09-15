@@ -55,15 +55,21 @@ export const MainPage = () => {
             muted
             preload="auto"
             poster="poster.png">
-            <source src="https://res.cloudinary.com/dnjk2bwkp/video/upload/v1600007246/dafo/mediumTransp_amf8r5.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dnjk2bwkp/video/upload/v1600173899/dafo/DafoMainVid_cyb83p.mp4" type="video/mp4" />
 
             <p>Image loading..</p>
           </DubaiVideo>
+
+
+
+
+
+
           {/* <DafoImage src={Dafo400} alt="Dafo" /> */}
 
-          <Hero>
+          {/*  <Hero>
             <DafoHeroLogo src={HeroLogo} alt="Dafo" />
-          </Hero>
+          </Hero> */}
           {/*  <img src="https://res.cloudinary.com/dnjk2bwkp/image/upload/v1599474586/dafo/DafoDubaiLrgFullColr_epa5j9.jpg" type="jpg" alt="Dafo Middle East" /> */}
           {/*  <PlayerContainer>
             <EmbedPlayer>
@@ -153,7 +159,7 @@ export const MainPage = () => {
           </TwitterBox>
         </ContactUs>
       </FlexDiv2>
-    </Wrapper>
+    </Wrapper >
   );
 };
 
@@ -207,6 +213,8 @@ const DubaiVideo = styled.video`
 width: 100%;
 height: auto;
 `;
+
+
 const DafoImage = styled.img`
     width: 30%;
     max-width: 200px;
@@ -217,7 +225,7 @@ const DafoImage = styled.img`
     }
 `;
 
-const Hero = styled.section`
+/* const Hero = styled.section`
 width:100%;
 height: 80vh;
 background-image: url(${DafoDubai});
@@ -232,7 +240,7 @@ const DafoHeroLogo = styled.img`
 width:50%;
 margin-top:40px;
 max-width: 400px;
-`
+` */
 
 const ContactImg = styled.img`
   max-width: 250px;
@@ -358,7 +366,11 @@ const ContactUs = styled.article`
   img {
     width: 250px;
     height: auto;
+    @media (max-width: 245px) {
+    width: 100%;
   }
+  }
+  
   div {
     padding: 10px 2px;
   }
