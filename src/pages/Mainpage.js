@@ -55,7 +55,7 @@ export const MainPage = () => {
             muted
             preload="auto"
             poster="poster.png">
-            <source src="https://res.cloudinary.com/dnjk2bwkp/video/upload/v1600173899/dafo/DafoMainVid_cyb83p.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dnjk2bwkp/video/upload/v1600182376/dafo/smlDafoMain_vdskmy.mp4" type="video/mp4" />
 
             <p>Image loading..</p>
           </DubaiVideo>
